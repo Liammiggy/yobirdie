@@ -349,15 +349,24 @@
       <style>
          /* Full-width background (Blue) */
          .tabs-container {
-         width: 100%;
-         /*            background-color: #0072c6;*/
-         background: rgb(0,121,192);
-         background: linear-gradient(180deg, rgba(0,121,192,1) 0%, rgba(0,97,168,1) 30%, rgba(1,36,107,1) 85%, rgba(1,34,105,1) 100%);
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 40px 0;
-         }
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,121,192,1) 0%, rgba(0,97,168,1) 30%, rgba(1,36,107,1) 85%, rgba(1,34,105,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    position: relative; /* Needed for absolute positioning of the curve */
+}
+
+.tabs-curve {
+    position: absolute;
+    bottom: -1px; /* Ensures the curve sits perfectly at the bottom */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
          /* 1280px Content Wrapper */
          .tabs {
          width: 1000px;
@@ -595,9 +604,14 @@
         </div>
         <div class="arrow right-arrow" onclick="changeTab(currentIndex + 1)">&#10095;</div>
         <!-- Right Arrow -->
+        
     </div>
 
- 
+ <div class="tabs-curve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2023.77 954.65" style="width: 100%; height: auto;">
+            <path fill="white" d="M2023.77,954.65V0c-381.13,365.17-788.43,432.88-1174.45,380.52C545.3,339.29,254.47,223.58,0,120.07v834.57h2023.77Z"/>
+        </svg>
+    </div>
 
 </div>
 
