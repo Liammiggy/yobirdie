@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>About Us</title>
+      <style>
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         html, body {
+         width: 100%;
+         min-height: 100vh;
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Nunito', sans-serif;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         overflow-x: hidden;
+         }
+         .navbar-container {
+         width: 100%;
+         position: sticky;
+         top: 0;
+         left: 0;
+         background: white;
+         backdrop-filter: blur(10px);
+         z-index: 1000;
+         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+         }
+         .navbar {
+         max-width: 1280px;
+         margin: 0 auto;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 10px ;
+         }
+         .navbar .logo img {
+         max-height: 40px;
+         }
+         .nav-links {
+         display: flex;
+         align-items: center;
+         gap: 30px;
+         }
+         .nav-links a {
+         text-decoration: none;
+         color: #012269;
+         font-size: 18px;
+         transition: 0.1s;
+         }
+         .nav-links a:hover {
+         color: #0079C0;
+         }
+         .nav-button {
+         padding: 10px 20px;
+         background: #00E5E0;
+         text-decoration: none;
+         font-size: 1.2rem;
+         border-radius: 30px;
+         transition: 0.3s;
+         }
+         .nav-button:hover {
+         background: #012269;
+         }
+         /* BURGER MENU */
+         .burger {
+         display: none;
+         font-size: 2rem;
+         cursor: pointer;
+         color: #00E5E0;
+         }
+         .hero, .about-section {
+         width: 100%; /* Full width */
+         display: flex;
+         justify-content: center; /* Centers content */
+         align-items: center;
+         padding: 50px 20px; /* Adds spacing */
+         }
+         .container {
+         max-width: 1920px; /* Adjust this based on preference */
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         }
+         .hero {
+         width: 100%;
+         height: 800px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background: #012269;
+         position: relative;
+         color: white;
+         overflow: hidden; /* Prevents extra spacing */
+         z-index: 1;
+         }
+         .hero-container {
+         width: 1280px;
+         max-width: 100%; /* Ensures responsiveness */
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 40px;
+         }
+         .hero-content {
+         max-width: 70%;
+         z-index: 2;
+         margin-top: -300px;
+         }
+         .hero-content h1 {
+         font-size: 70px;
+         margin-bottom: 20px;
+         font-weight: normal;
+         }
+         .hero-content .btn {
+         display: inline-block;
+         padding: 12px 24px;
+         background: #00E5E0;
+         color: white;
+         text-decoration: none;
+         font-size: 1.2rem;
+         border-radius: 302px;
+         transition: 0.3s;
+         }
+         .hero-content .btn:hover {
+         background: #012269;
+         }
+         .hero-image {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 60vw; /* Uses viewport width for better responsiveness */
+         height: 100%;
+         display: flex;
+         align-items: flex-start;
+         justify-content: flex-end;
+         overflow: hidden;
+         }
+         .hero-image img {
+         width: 1000px;
+         height: 100%;
+         object-fit: cover; /* Ensures it fills space without distortion */
+         }
+         /* Mobile Optimization */
+         @media screen and (max-width: 768px) {
+         .hero {
+         flex-direction: column;
+         height: 100vh; /* Ensure full viewport height */
+         padding: 0; /* Remove extra padding */
+         text-align: center;
+         }
+         .hero-content h1 {
+         font-size: 40px;
+         margin-bottom: 20px;
+         font-weight: normal;
+         }
+         .hero-container {
+         flex-direction: column;
+         text-align: center;
+         height: 100%; /* Ensure container takes full height */
+         }
+         .hero-content {
+         max-width: 100%;
+         margin-top: 50px;
+         }
+         .hero-image {
+         position: relative;
+         width: 100vw; /* Full viewport width */
+         height: 100vh; /* Full viewport height */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         }
+         .hero-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover; /* Ensure image covers the full container */
+         }
+         }
+         .about-section {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         min-height: 100vh;
+         position: relative;
+         background: url('fullbgabooutus.png') no-repeat center center/cover;
+         padding: 2rem;
+         position: relative;
+         z-index: 99999999999 !important; 
+         margin-top: -600px;
+         }
+         .about-container {
+         max-width: 1280px;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         margin-top: 200px;
+         }
+         .about-content {
+         max-width: 600px;
+         width: 45%;
+         /*            background: rgba(255, 255, 255, 0.8);*/
+         padding: 2rem;
+         border-radius: 8px;
+         text-align: left;
+         }
+         .left-content {
+         text-align: left;
+         }
+         .right-content {
+         text-align: right;
+         }
+         .about-content h1 {
+         font-size: 2.5rem;
+         margin-bottom: 1rem;
+         }
+         .about-content p {
+         font-size: 1.1rem;
+         line-height: 1.6;
+         }
+         @media (max-width: 768px) {
+         .about-container {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         }
+         .about-content {
+         width: 90%;
+         text-align: center;
+         margin-bottom: 1rem;
+         }
+         .left-content, .right-content {
+         text-align: center;
+         }
+         .about-content h1 {
+         font-size: 2rem;
+         }
+         .about-content p {
+         font-size: 1rem;
+         }
+         .about-section{
+         }
+         .navbar {
+         padding: 15px 20px;
+         }
+         .burger {
+         display: block;
+         }
+         .nav-links {
+         display: none;
+         position: absolute;
+         top: 60px;
+         right: 20px;
+         background: #012269;
+         flex-direction: column;
+         gap: 15px;
+         padding: 20px;
+         border-radius: 5px;
+         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+         }
+         .nav-links a {
+         color: white;
+         }
+         .nav-links.active {
+         display: flex;
+         }       
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <!-- NAVIGATION -->
+         <div class="navbar-container">
+            <nav class="navbar">
+               <a href="#" class="logo"><img src="./yobirdieLogo.png" alt="YoBirdie's Logo"></a>
+               <div class="burger" onclick="toggleMenu()">☰</div>
+               <div class="nav-links">
+                  <a href="#">Home</a>
+                  <a href="#">About</a>
+                  <a href="#">Services</a>       
+                  <a href="#">Contact</a>
+                  <a href="#"  style="color:white;" class="nav-button">Book an Appointment</a>
+               </div>
+            </nav>
+         </div>
+         <section class="hero">
+            <div class="hero-container">
+               <div class="hero-content">
+                  <h1>Dedicated Support Services for Your Business Needs at <span style="color:#00E5E0;">Your Call</span></h1>
+                  <a  href="#" class="btn">Book an Appointment</a>
+               </div>
+               <div class="hero-image">
+                  <img src="./heroimage.png" alt="YoBirdie">
+               </div>
+            </div>
+         </section>
+         <section class="about-section">
+            <div class="about-container">
+               <div style="background: red; opacity: 0;"class="about-content left-content">
+                  <h1></h1>
+                  <p></p>
+               </div>
+               <div class="about-content right-content">
+                  <h1>Our Vision</h1>
+                  <p>We envision a future where technology empowers businesses and individuals to reach their full potential.</p>
+               </div>
+            </div>
+         </section>
+      </div>
+      <script>
+         function toggleMenu() {
+             document.querySelector('.nav-links').classList.toggle('active');
+         }
+      </script>
+      <script >
+         function showService(index) {
+         let tabs = document.querySelectorAll('.tab');
+         let services = document.querySelectorAll('.service-item');
+         
+         tabs.forEach(tab => tab.classList.remove('active'));
+         services.forEach(service => service.classList.remove('active'));
+         
+         tabs[index].classList.add('active');
+         services[index].classList.add('active');
+         }
+         
+      </script>
+   </body>
+</html>

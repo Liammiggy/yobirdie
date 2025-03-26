@@ -13,7 +13,7 @@
          font-family: 'Nunito', sans-serif;
          }
          body {
-/*         background: red;*/
+         /*         background: red;*/
          overflow-x: hidden;
          }
          /* STICKY NAVIGATION */
@@ -22,7 +22,6 @@
          position: sticky;
          top: 0;
          left: 0;
-
          background: white;
          backdrop-filter: blur(10px);
          z-index: 1000;
@@ -71,83 +70,7 @@
          cursor: pointer;
          color: #00E5E0;
          }
-
-
-         /* HERO SECTION */
-       /*  .hero {
-         width: 100%;
-         height: 800px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         background: #012269;
-         margin-top:-100px;
-         color: white;
-         }
-         .hero-container {
-         width: 1280px;
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         margin-top: -132px;
-         }
-         .hero-content {
-         max-width: 50%;
-         }
-         .hero-content h1 {
-         font-size: 3rem;
-         margin-bottom: 20px;
-         font-weight: normal;
-         }
-         .hero-content .btn {
-         display: inline-block;
-         padding: 12px 24px;
-         background: #00E5E0;
-         color: white;
-         text-decoration: none;
-         font-size: 1.2rem;
-         border-radius: 302px;
-         transition: 0.3s;
-         }
-         .btn {
-         position: relative;
-         z-index: 10;
-         }
-         .hero-content .btn:hover {
-         background: #012269;
-         }
-         .hero-image {
-         position: absolute;
-         top: 0;
-         right: 0;
-         max-width: 50%;
-         height: 100%;
-         display: flex;
-         align-items: flex-start;
-         justify-content: flex-end;
-         }
-         .hero-image img {
-         width: 100%;
-         height: auto;
-         object-fit: cover;
-         }
-         .hero-curve {
-         position: absolute;
-         top: 380px;
-         left: 0;
-         width: 100%;
-         height: auto; 
-         z-index: 9999; 
-         pointer-events: none; 
-         }
-         .hero-curve svg {
-         width: 100%;
-         height: auto;
-         display: block;
-         }
-          */
-
-        
+       
          @media (max-width: 768px) {
          .navbar {
          padding: 15px 20px;
@@ -173,14 +96,8 @@
          .nav-links.active {
          display: flex;
          }       
-        
-
-
          }
       </style>
-
-
-
    </head>
    <body>
       <!-- NAVIGATION -->
@@ -197,125 +114,111 @@
             </div>
          </nav>
       </div>
-
       <style>/* HERO SECTION */
-.hero {
-    width: 100%;
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #012269;
-    position: relative;
-    color: white;
-    overflow: hidden; /* Prevents extra spacing */
-}
+         .hero {
+         width: 100%;
+         height: 800px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background: #012269;
+         position: relative;
+         color: white;
+         overflow: hidden; /* Prevents extra spacing */
+         }
+         .hero-container {
+         width: 1280px;
+         max-width: 90%; /* Ensures responsiveness */
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 40px;
+         }
+         .hero-content {
+         max-width: 65%;
+         z-index: 2;
+         margin-top: -300px;
+         }
+         .hero-content h1 {
+         font-size: 70px;
+         margin-bottom: 20px;
+         font-weight: normal;
+         }
+         .hero-content .btn {
+         display: inline-block;
+         padding: 12px 24px;
+         background: #00E5E0;
+         color: white;
+         text-decoration: none;
+         font-size: 1.2rem;
+         border-radius: 302px;
+         transition: 0.3s;
+         }
+         .hero-content .btn:hover {
+         background: #012269;
+         }
+         .hero-image {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 60vw; /* Uses viewport width for better responsiveness */
+         height: 100%;
+         display: flex;
+         align-items: flex-start;
+         justify-content: flex-end;
+         overflow: hidden;
+         }
+         .hero-image img {
+         width: 1000px;
+         height: 100%;
+         object-fit: cover; /* Ensures it fills space without distortion */
+         mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+         -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+         opacity: 0.3;
+         }
+         /* Mobile Optimization */
+         @media screen and (max-width: 768px) {
+         .hero {
+         flex-direction: column;
+         height: 50vh; /* Ensure full viewport height */
+         padding: 0; /* Remove extra padding */
+         text-align: center;
 
-.hero-container {
-    width: 1280px;
-    max-width: 90%; /* Ensures responsiveness */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-
-}
-
-.hero-content {
-    max-width: 65%;
-   z-index: 2;
-    margin-top: -300px;
-}
-
-.hero-content h1 {
-    font-size: 70px;
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-.hero-content .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #00E5E0;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 302px;
-    transition: 0.3s;
-}
-
-.hero-content .btn:hover {
-    background: #012269;
-}
-
-.hero-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60vw; /* Uses viewport width for better responsiveness */
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 1000px;
-    height: 100%;
-    object-fit: cover; /* Ensures it fills space without distortion */
-}
-
-
-/* Mobile Optimization */
-@media screen and (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        height: 100vh; /* Ensure full viewport height */
-        padding: 0; /* Remove extra padding */
-        text-align: center;
-    }
-
-
-        .hero-content h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        height: 100%; /* Ensure container takes full height */
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-top: 50px;
-    }
-
-    .hero-image {
-        position: relative;
-        width: 100vw; /* Full viewport width */
-        height: 100vh; /* Full viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensure image covers the full container */
-    }
-
-    .hero-curve {
-        bottom: -10px;
-    }
-}
-
-</style>
+         }
+         .hero-content h1 {
+         font-size: 40px;
+         margin-bottom: 20px;
+         font-weight: normal;
+         }
+         .hero-container {
+         flex-direction: column;
+         text-align: center;
+         height: 100%; /* Ensure container takes full height */
+         }
+         .hero-content {
+         max-width: 100%;
+         margin-top: 40px;
+         }
+         .hero-image {
+         position: relative;
+         width: 100vw; /* Full viewport width */
+         height: 100vh; /* Full viewport height */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         margin-top: -502px;
+         }
+         .hero-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover; /* Ensure image covers the full container */
+         }
+         .hero-curve {
+         bottom: -10px;
+         }
+         }
+      </style>
       <!-- HERO SECTION -->
       <section class="hero">
          <div class="hero-container">
@@ -326,312 +229,127 @@
             <div class="hero-image">
                <img src="./heroimage.png" alt="YoBirdie">
             </div>
-            
-         </div>     
-
-      <!-- <div class="hero-curve">
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2023.77 954.65" style="width: 100%; ">
-            <path fill="white" d="M2023.77,954.65V0c-381.13,365.17-788.43,432.88-1174.45,380.52C545.3,339.29,254.47,223.58,0,120.07v834.57h2023.77Z"/>
-         </svg>
-      </div> -->
- <div class="hero-line">
-    <!-- <img class="bird" src="./birdline.png" alt="Hero Bird Line"> -->
-    <img src="./colorlines.png" alt="Hero Decorative Line">
-</div>
-
-
-      </section> 
-
-<style>
-    .hero-line {
-    width: 100vw; /* Full width */
-    text-align: center;
-    position: absolute;
-    bottom: -95px; /* Adjust as needed */
-    left: 0;
-    z-index: 99999999 !important; /* Ensure highest priority */
-    pointer-events: none; /* Prevent interaction issues */
-
-}
-
-.hero-line img {
-    
-    width: 100%; /* Ensures responsiveness */
-    height: auto;
-}
-
-/* Mobile Adjustments */
-@media screen and (max-width: 768px) {
-    .hero-line {
-        bottom: -30px; /* Adjust positioning on smaller screens */
-    }
-
-    .hero-line img {
-        max-width: 100%;
-    }
-}
-</style>
-
-
-<style>
-  .bird {
-    position: absolute; /* Stays inside .hero-line */
-    top: 101%; /* Keeps it in place */
-    left:30%; /* Adjust as needed */
-    transform: translate(-50%, -50%); /* Fixes center positioning */
-    width: 200px; /* Set a fixed width to prevent unwanted scaling */
-    max-width: 20%; /* Responsive size */
-     z-index: 99999999 !important; /* Ensure highest priority */
-    pointer-events: none; /* Avoids interaction issues */
-}
-
-/*bird {
-    position: absolute;
-    top: 96%; 
-    left:39%; 
-    transform: translate(-50%, -50%);
-    width: 250px; 
-    max-width: 27%; 
-     z-index: 99999999 !important; 
-    pointer-events: none; 
-}*/
-
-@media screen and (max-width: 768px) {
-    .bird  {
-        display: none;
-    }
-
-
-}
-    
-
-
-</style>
-    <div class="bird" >
-        <img src="./birdline.png" alt="Hero Decorative Line">
-    </div>
-
-
-<section class="about-section">
-    <div class="about-image"></div>
-    <div class="about-content">
-        <h1>Make Your Life Easier</h1>
-        <p>When you need that day off, know that someone has your back.</p>
-    </div>
-</section>
-
-<style>
-    .about-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 1280px;
-        min-height: 400px;
-        margin: auto;
+         </div>
       
-
-    }
-
-    .about-image {
-        flex: 1;
-        background: url('aboutusimage.png') no-repeat center center/cover;
-        height: 100%;
-        min-height: 300px;
-    }
-
-    .about-content {
-        flex: 1;
-        padding: 40px;
-        text-align: right;
-    }
-
-    .about-content h1 {
-        font-size: 60px;
-        margin-bottom: 15px;
-        color: #012269
-    }
-
-    .about-content p {
-        font-size: 30px;
-        line-height: 1.5;
-        color: #8B8B8B;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .about-section {
-            flex-direction: column;
-            min-height: auto;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 250px;
-            display:none;
-        }
-
-             .about-content {
-    padding: 20px;
-    text-align: center;
-    background: url('aboutusimage.png') no-repeat center center/cover;
-    height: 100%;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Adjust text color for readability */
-}
-        .about-content h1 {
-            font-size: 40px;
-        }
-
-        .about-content p {
-            font-size: 25px;
-        }
-    }
-</style>
-
-
-<!-- <section class="about">
-    <div class="about-container">
-        <div class="about-image">
-            <img src="aboutusimage.png" alt="About Us">
-        </div>
-        <div class="about-content">
+         <div class="hero-line">
+            <!-- <img class="bird" src="./birdline.png" alt="Hero Bird Line"> -->
+            <img src="./colorlines.png" alt="Hero Decorative Line">
+         </div>
+      </section>
+      <style>
+         .hero-line {
+         width: 100vw; /* Full width */
+         text-align: center;
+         position: absolute;
+         bottom: -95px; /* Adjust as needed */
+         left: 0;
+         z-index: 99999999 !important; /* Ensure highest priority */
+         pointer-events: none; /* Prevent interaction issues */
+         }
+         .hero-line img {
+         width: 100%; /* Ensures responsiveness */
+         height: auto;
+         }
+         /* Mobile Adjustments */
+         @media screen and (max-width: 768px) {
+         .hero-line {
+         bottom: -30px; /* Adjust positioning on smaller screens */
+         }
+         .hero-line img {
+         max-width: 100%;
+         }
+         }
+      </style>
+      <style>
+         .bird {
+         position: absolute; /* Stays inside .hero-line */
+         top: 101%; /* Keeps it in place */
+         left:30%; /* Adjust as needed */
+         transform: translate(-50%, -50%); /* Fixes center positioning */
+         width: 200px; /* Set a fixed width to prevent unwanted scaling */
+         max-width: 20%; /* Responsive size */
+         z-index: 99999999 !important; /* Ensure highest priority */
+         pointer-events: none; /* Avoids interaction issues */
+         }
+         @media screen and (max-width: 768px) {
+         .bird  {
+         display: none;
+         }
+         }
+      </style>
+      <!-- <div class="bird" >
+         <img src="./birdline.png" alt="Hero Decorative Line">
+         </div> -->
+      <section class="about-section">
+         <div class="about-image"></div>
+         <div class="about-content">
             <h1>Make Your Life Easier</h1>
             <p>When you need that day off, know that someone has your back.</p>
-        </div>
-    </div>
-</section>
-
-<style>
-    
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 80px 10%;
-    background-color: #FEFEFE; /* Adjust background if needed */
-    margin-top: -190px;
-}
-
-.about-container {
-    display: flex;
-    max-width: 1280px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.about-image {
-   flex: 1;
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0;
-    margin: 0;  
-    height: 10%;
-    left: 0;    
-}
-
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0; /* Removes any border rounding */
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-
-.about-content {
-    flex: 2;
-    max-width: 60%;
-    text-align: right; /* Left-align text */
-}
-
-.about-content h1 {
-    font-size: 70px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #012269;
-}
-
-.about-content p {
-    font-size: 40px;
-    color: #555;
-    
-     color: #8B8B8B;
-}
-
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: left;
-         margin-top: 170px;
-    }
-
-    .about-image, .about-content {
-        max-width: 100%;
-    }
-
-    .about-image {
-        justify-content: center;
-        display: none;
-    }
-    .about-content {
-   
-   
-    text-align: center; /* Left-align text */
-}
-.about-content h1 {
-    font-size: 40px;
-   
-}
-.about-content p {
-    font-size: 25px;
-   
-}
-}
-
-
-</style> -->
-
-<!-- <style>
-
-.hero-line {
-    position: absolute;  /* Keeps it positioned relative to hero section */
-    bottom: -20px;       /* Adjust this to fine-tune positioning */
-    left: 0;
-    width: 100%;         /* Full width on all screens */
-    max-width: 100vw;    /* Prevents any overflow */
-    z-index: 2;
-}
-.hero-line img {
-    width: 100%;         /* Ensures image stretches to the full width */
-    height: auto;        /* Maintains aspect ratio */
-    display: block;
-}
-
-
-@media (max-width: 768px) {
-    .hero-line {
-        bottom: -10px; /* Adjust this value for mobile screens */
-    }
-}
-
-</style>
-
-          <div class="hero-line">
-    <img src="./herolines.png" alt="YoBirdie">
-</div> -->
-
+         </div>
+      </section>
+      <style>
+         .about-section {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         max-width: 1280px;
+         min-height: 400px;
+         margin: auto;
+         }
+         .about-image {
+         flex: 1;
+         background: url('aboutusimage.png') no-repeat center center/cover;
+         height: 100%;
+         min-height: 300px;
+         }
+         .about-content {
+         flex: 1;
+         padding: 40px;
+         text-align: right;
+         }
+         .about-content h1 {
+         font-size: 60px;
+         margin-bottom: 15px;
+         color: #012269
+         }
+         .about-content p {
+         font-size: 30px;
+         line-height: 1.5;
+         color: #8B8B8B;
+         }
+         /* Responsive Design */
+         @media (max-width: 768px) {
+         .about-section {
+         flex-direction: column;
+         min-height: auto;
+         }
+         .about-image {
+         width: 100%;
+         height: 250px;
+         display:none;
+         }
+         .about-content {
+         padding: 20px;
+         text-align: center;
+         background: url('aboutusimage.png') no-repeat center center/cover;
+         height: 100%;
+         min-height: 400px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         color: white; /* Adjust text color for readability */
+         }
+         .about-content h1 {
+         font-size: 40px;
+         }
+         .about-content p {
+         font-size: 25px;
+         }
+         }
+      </style>
+      
       <script>
          function toggleMenu() {
              document.querySelector('.nav-links').classList.toggle('active');
