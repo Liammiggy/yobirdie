@@ -70,7 +70,6 @@
          cursor: pointer;
          color: #00E5E0;
          }
-       
          @media (max-width: 768px) {
          .navbar {
          padding: 15px 20px;
@@ -183,7 +182,6 @@
          height: 60vh; /* Ensure full viewport height */
          padding: 0; /* Remove extra padding */
          text-align: center;
-
          }
          .hero-content h1 {
          font-size: 40px;
@@ -230,7 +228,6 @@
                <img src="./heroimage.png" alt="YoBirdie">
             </div>
          </div>
-      
          <div class="hero-line">
             <!-- <img class="bird" src="./birdline.png" alt="Hero Bird Line"> -->
             <img src="./colorlines.png" alt="Hero Decorative Line">
@@ -349,36 +346,278 @@
          }
          }
       </style>
-      
-      <script>
-         function toggleMenu() {
-             document.querySelector('.nav-links').classList.toggle('active');
+      <style>
+         /* Full-width background (Blue) */
+         .tabs-container {
+         width: 100%;
+         /*            background-color: #0072c6;*/
+         background: rgb(0,121,192);
+         background: linear-gradient(180deg, rgba(0,121,192,1) 0%, rgba(0,97,168,1) 30%, rgba(1,36,107,1) 85%, rgba(1,34,105,1) 100%);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 40px 0;
          }
-      </script>
-      <script >
-         function showService(index) {
-         let tabs = document.querySelectorAll('.tab');
-         let services = document.querySelectorAll('.service-item');
-         
-         tabs.forEach(tab => tab.classList.remove('active'));
-         services.forEach(service => service.classList.remove('active'));
-         
-         tabs[index].classList.add('active');
-         services[index].classList.add('active');
+         /* 1280px Content Wrapper */
+         .tabs {
+         width: 1000px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         gap: 5px;
          }
-         
-      </script>
-      <script>
-         function showService(index) {
-             let tabs = document.querySelectorAll('.tab');
-             let services = document.querySelectorAll('.service-item');
-         
-             tabs.forEach(tab => tab.classList.remove('active'));
-             services.forEach(service => service.classList.remove('active'));
-         
-             tabs[index].classList.add('active');
-             services[index].classList.add('active');
+         /* Tab Icons */
+         .tab {
+         position: relative;
+         padding: 10px;
+         text-align: center;
+         cursor: pointer;
+         transition: 0.3s ease-in-out;
          }
-      </script>
+         .tab img {
+         width: 65px;
+         height: 65px;
+         filter: brightness(0) invert(1);
+         transition: 0.3s;
+         }
+         /* Highlight Bar */
+         .tab.active::before {
+         content: "";
+         position: absolute;
+         top: -40px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 160px;
+         height: 30px;
+         background-color: #90D812;
+         border-radius:2px;
+         }
+         /* Centered Title */
+         .tab-title {
+         text-align: center;
+         font-size: 24px;
+         color: #fff;
+         margin: 20px 0;
+         }
+         /* Circle Container (Inside Blue) */
+         .content-container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         margin-top: 20px;
+         }
+         /* Circle with icon inside */
+         .circle {
+         width: 900px;
+         height: 900px;
+         background-color: #90D812;
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         font-size: 18px;
+         color: #fff;
+         padding: 60px;
+         flex-direction: column;
+         transition: 0.5s ease-in-out;
+         }
+         .circle img {
+         width: 90px;
+         height: 90px;
+         margin-bottom: 10px;
+         filter: brightness(0) invert(1);
+         }
+         .circle-content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         transform: translateY(-15px); /* Move content up */
+         }
+         #circle-content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         position: relative;
+         }
+         #circle-icon,
+         #circle-text {
+         transform: translateY(-200px); /* Move both icon and text up */
+         }
+         /* Arrows */
+         .arrow {
+         font-size: 20px;
+         color: white;
+         cursor: pointer;
+         position: absolute;
+         transform: translateY(-50%);
+         /*    background: rgba(0, 0, 0, 0.3);*/
+         padding: 10px 15px;
+         border-radius: 50%;
+         user-select: none;
+         }
+         .left-arrow {
+         left: 400px;
+         }
+         .right-arrow {
+         right: 400px;
+         }
+         .arrow:hover {
+         background: rgba(0, 0, 0, 0.6);
+         }
+         /* Mobile Styles */
+         @media (max-width: 768px) {
+         .tabs {
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 40px;
+         }
+         .tab {
+         flex: 0 0 auto;
+         width: 50px;
+         }
+         .tab img {
+         width: 40px;
+         height: 40px;
+         }
+         .circle {
+         width: 500px;
+         height: 500px;
+         font-size: 14px;
+         }
+         .circle img {
+         width: 60px;
+         height: 60px;
+         }
+         .tab.active::before {
+         width: 80px;
+         height: 15px;
+         }
+         .arrow {
+         display: none;
+         }
+         @media (max-width: 768px) { /* Mobile view */
+         #circle-icon,
+         #circle-text {
+         transform: translateY(-8px); /* Less movement on smaller screens */
+         }
+         }
+      </style>
+      </head>
+      <body>
+         <!-- Tab Icons Section -->
+         <div class="tabs-container">
+            <div class="tabs">
+               <div class="tab active" onclick="changeTab(0)">
+                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab 1">
+               </div>
+               <div class="tab" onclick="changeTab(1)">
+                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp" alt="Tab 2">
+               </div>
+               <div class="tab" onclick="changeTab(2)">
+                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp" alt="Tab 3">
+               </div>
+               <div class="tab" onclick="changeTab(3)">
+                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp" alt="Tab 4">
+               </div>
+               <div class="tab" onclick="changeTab(4)">
+                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp" alt="Tab 5">
+               </div>
+            </div>
+            <!-- Dynamic Title -->
+            <div class="tab-title" id="tab-title">Our High-Value Services</div>
+            <!-- Circle with Icon Inside -->
+            <div class="content-container">
+               <div class="arrow left-arrow" onclick="changeService(-1)">&#10094;</div>
+               <!-- Left Arrow -->
+               <div class="circle" id="circle-content">
+                  <img id="circle-icon" src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab Icon">
+                  <div id="circle-text">Social Media Management, Content Creation, Web Design, and More!</div>
+               </div>
+               <div class="arrow right-arrow" onclick="changeService(1)">&#10095;</div>
+               <!-- Right Arrow -->
+            </div>
+         </div>
+         <script>
+            // Tab Data
+            const tabTitles = [
+                "Our High-Value Services dfgdfg", 
+                "Expert Digital Solutions",
+                "Innovative Design Services",
+                "Cutting-Edge Development",
+                "Advanced Marketing Strategies"
+            ];
+            
+            
+            
+            const circleContents = [
+                "Social Media Management, Content Creation, Web Design, and More!",
+                "Video Editing, Motion Graphics, Digital Marketing Strategies.",
+                "UI/UX Design, Branding, Creative Graphic Design.",
+                "Web Development, Mobile App Solutions, Software Engineering.",
+                "SEO Optimization, PPC Advertising, Growth Hacking Techniques."
+            ];
+            
+            const icons = [
+                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp",
+                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp",
+                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp",
+                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp",
+                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp"
+            ];
+            
+            function changeTab(index) {
+                // Update Active Tab
+                document.querySelectorAll(".tab").forEach((tab, i) => {
+                    tab.classList.toggle("active", i === index);
+                });
+            
+                // Update Title
+                document.getElementById("tab-title").textContent = tabTitles[index];
+            
+                // Update Circle Content
+                document.getElementById("circle-text").textContent = circleContents[index];
+            
+                // Update Icon Inside Circle
+                document.getElementById("circle-icon").src = icons[index];
+            }
+         </script>
+         <script>
+            function toggleMenu() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            }
+         </script>
+         <script >
+            function showService(index) {
+            let tabs = document.querySelectorAll('.tab');
+            let services = document.querySelectorAll('.service-item');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            services.forEach(service => service.classList.remove('active'));
+            
+            tabs[index].classList.add('active');
+            services[index].classList.add('active');
+            }
+            
+         </script>
+         <script>
+            function showService(index) {
+                let tabs = document.querySelectorAll('.tab');
+                let services = document.querySelectorAll('.service-item');
+            
+                tabs.forEach(tab => tab.classList.remove('active'));
+                services.forEach(service => service.classList.remove('active'));
+            
+                tabs[index].classList.add('active');
+                services[index].classList.add('active');
+            }
+         </script>
    </body>
 </html>
