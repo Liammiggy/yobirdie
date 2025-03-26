@@ -395,7 +395,7 @@
          /* Centered Title */
          .tab-title {
          text-align: center;
-         font-size: 24px;
+         font-size: 40px;
          color: #fff;
          margin: 20px 0;
          }
@@ -407,6 +407,23 @@
          flex-direction: column;
          margin-top: 20px;
          }
+         .tab-content {
+    text-align: center; /* Center text horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    /*margin-top: 50px; 
+    margin-bottom: 50px; */
+    padding: 10px;
+}
+
+.tab-description {
+    font-size: 18px;
+    max-width: 600px; 
+    line-height: 1.5;
+    color: white;
+}
          /* Circle with icon inside */
          .circle {
          width: 900px;
@@ -435,7 +452,7 @@
          align-items: center;
          justify-content: center;
          text-align: center;
-         transform: translateY(-15px); /* Move content up */
+         transform: translateY(-50px); /* Move content up */
          }
          #circle-content {
          display: flex;
@@ -448,6 +465,13 @@
          #circle-icon,
          #circle-text {
          transform: translateY(-200px); /* Move both icon and text up */
+         font-size: 25px;
+
+         }
+
+          #circle-text {
+         padding: 20px;
+
          }
          /* Arrows */
          .arrow {
@@ -488,8 +512,8 @@
          height: 40px;
          }
          .circle {
-         width: 500px;
-         height: 500px;
+         width: 385px;
+         height: 385px;
          font-size: 14px;
          }
          .circle img {
@@ -512,83 +536,134 @@
       </style>
       </head>
       <body>
-         <!-- Tab Icons Section -->
-         <div class="tabs-container">
-            <div class="tabs">
-               <div class="tab active" onclick="changeTab(0)">
-                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab 1">
-               </div>
-               <div class="tab" onclick="changeTab(1)">
-                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp" alt="Tab 2">
-               </div>
-               <div class="tab" onclick="changeTab(2)">
-                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp" alt="Tab 3">
-               </div>
-               <div class="tab" onclick="changeTab(3)">
-                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp" alt="Tab 4">
-               </div>
-               <div class="tab" onclick="changeTab(4)">
-                  <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp" alt="Tab 5">
-               </div>
-            </div>
-            <!-- Dynamic Title -->
-            <div class="tab-title" id="tab-title">Our High-Value Services</div>
-            <!-- Circle with Icon Inside -->
-            <div class="content-container">
-               <div class="arrow left-arrow" onclick="changeService(-1)">&#10094;</div>
-               <!-- Left Arrow -->
-               <div class="circle" id="circle-content">
-                  <img id="circle-icon" src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab Icon">
-                  <div id="circle-text">Social Media Management, Content Creation, Web Design, and More!</div>
-               </div>
-               <div class="arrow right-arrow" onclick="changeService(1)">&#10095;</div>
-               <!-- Right Arrow -->
-            </div>
+       
+       <!-- Tab Icons Section -->
+<div class="tabs-container">
+    <div class="tabs">
+        <div class="tab active" onclick="changeTab(0)">
+            <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab 1">
+        </div>
+        <div class="tab" onclick="changeTab(1)">
+            <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp" alt="Tab 2">
+        </div>
+        <div class="tab" onclick="changeTab(2)">
+            <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp" alt="Tab 3">
+        </div>
+        <div class="tab" onclick="changeTab(3)">
+            <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp" alt="Tab 4">
+        </div>
+        <div class="tab" onclick="changeTab(4)">
+            <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp" alt="Tab 5">
+        </div>
+    </div>
+
+    <!-- Dynamic Title & Description -->
+    <div class="tab-content">
+        <div class="tab-title" id="tab-title">Our High-Value Services</div>
+        <div class="tab-description" id="tab-description">We offer top-tier services in digital marketing, branding, and content creation to enhance your business growth.</div>
+    </div>
+
+    <!-- Circle with Icon Inside -->
+    <div class="content-container">
+        <div class="arrow left-arrow" onclick="changeTab(currentIndex - 1)">&#10094;</div>
+        <!-- Left Arrow -->
+        <div class="circle" id="circle-content">
+            <img id="circle-icon" src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab Icon">
+            <div id="circle-text">Social Media Management, Content Creation, Graphic Design, Web Design and Development, and more in the nest!</div>
+        </div>
+        <div class="arrow right-arrow" onclick="changeTab(currentIndex + 1)">&#10095;</div>
+        <!-- Right Arrow -->
+    </div>
+</div>
+
+<script>
+    // Tab Data
+    const tabContents = [
+        { 
+            title: "Our High-Value Services", 
+            description: "We offer top-tier services in digital marketing, branding, and content creation to enhance your business growth.",
+            circleText: " Social Media Management,Content Creation, Graphic Design,Web Design and Development, and more in the nest!",
+            icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp"
+        },
+        { 
+            title: "Expert Digital Solutions", 
+            description: "From web design to SEO strategies, we provide expert digital solutions tailored to your needs.",
+            circleText: "Video Editing, Motion Graphics, Digital Marketing Strategies.",
+            icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp"
+        },
+        { 
+            title: "Innovative Design Services", 
+            description: "Our design team creates stunning visuals, user-friendly interfaces, and captivating branding elements.",
+            circleText: "UI/UX Design, Branding, Creative Graphic Design.",
+            icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp"
+        },
+        { 
+            title: "Cutting-Edge Development", 
+            description: "We specialize in web and app development, offering high-performance, secure, and scalable solutions.",
+            circleText: "Web Development, Mobile App Solutions, Software Engineering.",
+            icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp"
+        },
+        { 
+            title: "Advanced Marketing Strategies", 
+            description: "Boost your online presence with targeted campaigns, analytics, and conversion-driven marketing techniques.",
+            circleText: "SEO Optimization, PPC Advertising, Growth Hacking Techniques.",
+            icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp"
+        }
+    ];
+
+    let currentIndex = 0;
+
+    function changeTab(index) {
+        if (index < 0) index = tabContents.length - 1; // Loop to last tab
+        if (index >= tabContents.length) index = 0; // Loop to first tab
+
+        currentIndex = index;
+
+        // Update Active Tab
+        document.querySelectorAll(".tab").forEach((tab, i) => {
+            tab.classList.toggle("active", i === index);
+        });
+
+        // Update Title & Description
+        document.getElementById("tab-title").textContent = tabContents[index].title;
+        document.getElementById("tab-description").textContent = tabContents[index].description;
+
+        // Update Circle Content
+        document.getElementById("circle-text").textContent = tabContents[index].circleText;
+        document.getElementById("circle-icon").src = tabContents[index].icon;
+    }
+</script>
+
+
+
+
+
+
+  <section class="about-section">
+         <div class="about-image"></div>
+         <div class="about-content">
+            <h1 style="text-align: left;">Why YoBirdie?</h1>
+            <p  style="text-align: left; color: #00E5E0;">Think of us as the team that's here to take your business to the next level.</p>
+
+           <!--  <ul>
+                <li>YoBirdie streamlines the process, freeing you to focus on growth. </li>
+                <li>We'll handle the day-to-day tasks and deliver measurable results, so you can see your dream become a reality.</li>
+    
+            </ul> -->
+          
          </div>
-         <script>
-            // Tab Data
-            const tabTitles = [
-                "Our High-Value Services dfgdfg", 
-                "Expert Digital Solutions",
-                "Innovative Design Services",
-                "Cutting-Edge Development",
-                "Advanced Marketing Strategies"
-            ];
-            
-            
-            
-            const circleContents = [
-                "Social Media Management, Content Creation, Web Design, and More!",
-                "Video Editing, Motion Graphics, Digital Marketing Strategies.",
-                "UI/UX Design, Branding, Creative Graphic Design.",
-                "Web Development, Mobile App Solutions, Software Engineering.",
-                "SEO Optimization, PPC Advertising, Growth Hacking Techniques."
-            ];
-            
-            const icons = [
-                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp",
-                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp",
-                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp",
-                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp",
-                "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp"
-            ];
-            
-            function changeTab(index) {
-                // Update Active Tab
-                document.querySelectorAll(".tab").forEach((tab, i) => {
-                    tab.classList.toggle("active", i === index);
-                });
-            
-                // Update Title
-                document.getElementById("tab-title").textContent = tabTitles[index];
-            
-                // Update Circle Content
-                document.getElementById("circle-text").textContent = circleContents[index];
-            
-                // Update Icon Inside Circle
-                document.getElementById("circle-icon").src = icons[index];
-            }
-         </script>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
          <script>
             function toggleMenu() {
                 document.querySelector('.nav-links').classList.toggle('active');
