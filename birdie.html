@@ -360,7 +360,7 @@
 
 .tabs-curve {
     position: absolute;
-    bottom: -100px; /* Ensures the curve sits perfectly at the bottom */
+    bottom: -20px; 
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -554,6 +554,7 @@
          display: none;
          }
 
+
           #circle-text {
         
          font-size: 20px;
@@ -607,12 +608,12 @@
         <!-- Right Arrow -->
 
     </div>
-
+<!-- 
  <div class="tabs-curve">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2023.77 954.65" style="width: 100%; height: auto;">
             <path fill="white" d="M2023.77,954.65V0c-381.13,365.17-788.43,432.88-1174.45,380.52C545.3,339.29,254.47,223.58,0,120.07v834.57h2023.77Z"/>
         </svg>
-    </div>
+    </div> -->
 
 </div>
 
@@ -691,29 +692,112 @@
     <img src="./colorlines.png" alt="Hero Decorative Line" style="width: 100%;">
 </div>
  -->
- 
-  <section class="about-section">
   
-</div>
 
 
-         <div class="about-image"></div>
-         <div class="about-content">
+<style>
+.why-us {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1440px;
+/*    margin: 0 auto;*/
+    padding: 40px;
+/*    background: #fff;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+      margin: -150px auto 0;
+/*      margin: 0 auto 0;*/
+     z-index: 9999999999999!important;
+     position: relative;
 
-            <h1 style="text-align: left;">Why YoBirdie?</h1>
-            <p  style="text-align: left; color: #00E5E0;">Think of us as the team that's here to take your business to the next level.</p>
+}
 
-           <!--  <ul>
-                <li>YoBirdie streamlines the process, freeing you to focus on growth. </li>
-                <li>We'll handle the day-to-day tasks and deliver measurable results, so you can see your dream become a reality.</li>
-    
-            </ul> -->
+.why-us img {
+    max-width: 740px;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: -250px; 
+
+}
+
+.why-us-content {
+    flex: 1;
+     margin: -700px auto 0;
+
+}
+
+.why-us h2 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    color: #012269;
+}
+
+.why-us p {
+    font-size: 30px;
+    color: #00E5E0;
+    margin-bottom: 15px;
+}
+
+.why-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-us ul li {
+    font-size: 25px;
+    color: #8B8B8B;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.why-us ul li::before {
+    content: "•";
+    color: #00E5E0;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .why-us {
+        flex-direction: column-reverse;
+        text-align: center;
+         margin-top: -20px;
+    }
+
+    .why-us img {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .why-us-content {
+    flex: 1;
+     margin: 0;
+
+}
+
+}
+
+
+ </style>
+
+
+<section style="background: url('nestcurve.png') no-repeat center top; background-size: cover; height: 727px; width: 100%; position: relative; margin-top: -600px; z-index: 999999!important;"></section>
+
+<section class="why-us">
+
+    <img src="birdclip.png" alt="Why Us">
+    <div class="why-us-content">
+        <h2>Why YoBirdie?</h2>
+        <p>Think of us as the team that's here to take your business to the next level.</p>
+        <ul>
+            <li>YoBirdie streamlines the process,freeing you to focus on growth.</li><br>
+            <li>We'll handle the day-to-day tasks and deliver measurable results, so you can see your dream become a reality.</li>
           
-         </div>
-      </section>
-
-
-
+        </ul>
+    </div>
+</section>
 
 
 
