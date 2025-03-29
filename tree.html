@@ -1,0 +1,250 @@
+
+    <style>
+        .tree-services {
+            margin: 0;
+            padding: 0;
+            background-color: #005baa; /* Blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           
+        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .tree {
+            width: 100%;
+            max-width: 1440px;
+            height: auto;
+        }
+
+        .info-box {
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            border-radius:  150px;
+
+        }
+
+        .advisor {
+            background-color: #6BCB3F;
+            left: -30px;
+            top: 90px;
+
+        }
+
+        .resources {
+            background-color: #F4A623;
+            right: -10px;
+            top: 160px;
+        }
+
+        .text-box {
+            position: absolute;
+            width: 200px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .text-left {
+            left: -300px;
+            top: 270px;
+            text-align: left;
+        }
+
+        .text-right {
+            right: -300px;
+            top: 330px;
+            text-align: left;
+        }
+
+        .line {
+            position: absolute;
+            /*width: 60px;
+            height: 5px;*/
+/*            background: white;*/
+        }
+
+      /*  .line-left {
+            left: -120px;
+            top: 200px;
+        }
+
+*/
+
+        .line-left {
+    position: absolute;
+    left: -180px;
+    top: 200px;
+    width: 110px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    background-image: url('leftline.png'); /* Replace with your image */
+    background-size: cover; /* Ensures the image covers the div */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-position: center; /* Centers the image */
+}
+
+         .line-right {
+    position: absolute;
+    right: -180px;
+    top: 250px;
+    width: 110px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    background-image: url('leftline.png'); /* Replace with your image */
+    background-size: cover; /* Ensures the image covers the div */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-position: center; /* Centers the image */
+    transform: scaleX(-1);
+}
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+
+             .container {
+                align-items: center;
+            }
+
+            .tree {
+                max-width: 250px;
+                display:none;
+            }
+
+            .info-box {
+                position: static;
+                margin: 10px 0;
+                border-radius:10px;
+                width:100%;
+            }
+
+            .text-box {
+                position: static;
+                text-align: center;
+                width:60%;
+                margin: 10px 0;
+            }
+
+            .line {
+                display: none;
+            }
+            /*.info-box {
+                width: 120px;
+                height: 120px;
+                font-size: 14px;
+            }
+
+            .advisor {
+                left: -120px;
+                top: 30px;
+            }
+
+            .resources {
+                right: -120px;
+                top: 130px;
+            }
+
+            .text-box {
+                width: 180px;
+                font-size: 12px;
+            }
+
+            .text-left {
+                left: -190px;
+                top: 50px;
+            }
+
+            .text-right {
+                right: -190px;
+                top: 160px;
+            }
+
+            .line {
+                width: 40px;
+            }
+
+            .line-left {
+                left: -50px;
+                top: 80px;
+            }
+
+            .line-right {
+                right: -50px;
+                top: 180px;
+            }*/
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                align-items: center;
+            }
+
+            .tree {
+                max-width: 250px;
+                display:none;
+            }
+
+            .info-box {
+                position: static;
+                margin: 10px 0;
+                border-radius:10px;
+                width:100%;
+            }
+
+            .text-box {
+                position: static;
+                text-align: center;
+                width:60%;
+                margin: 10px 0;
+            }
+
+            .line {
+                display: none;
+            }
+        }
+    </style>
+
+
+     <section class="tree-services">
+
+    <div class="container">
+        <img class="tree" src="tree.png" alt="yobirdietree">
+
+        <!-- Dedicated Client Advisor -->
+        <div class="info-box advisor">Dedicated Client Advisor</div>
+        <div class="line line-left"></div>
+        <div class="text-box text-left">
+            To help you build your online presence from scratch to operations (40 hours resource access)
+        </div>
+
+        <!-- Added Resources -->
+        <div class="info-box resources">Added Resources</div>
+        <div class="line line-right"></div>
+        <div class="text-box text-right">
+            Hourly, additional resources for special projects
+        </div>
+    </div>
+
+</section>
+
+
+
