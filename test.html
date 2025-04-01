@@ -1,69 +1,118 @@
-<section class="whyus-section">
-         <div class="whyus-image"></div>
-         <div class="whyus-content">
-            <h1>Make Your Life Easier</h1>
-            <p>When you need that day off, know that someone has your back.</p>
-         </div>
-      </section>
-      <style>
-         .whyus-section {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         width: 100%;
-         max-width: 1280px;
-         min-height: 400px;
-         margin: auto;
-         }
-         .whyus-image {
-         flex: 1;
-         background: url('birdclip.png') no-repeat center center/cover;
-         height: 100%;
-         min-height: 300px;
-         }
-         .whyus-content {
-         flex: 1;
-         padding: 40px;
-         text-align: right;
-         }
-         .whyus-content h1 {
-         font-size: 60px;
-         margin-bottom: 15px;
-         color: #012269
-         }
-         .whyus-content p {
-         font-size: 30px;
-         line-height: 1.5;
-         color: #8B8B8B;
-         }
-         /* Responsive Design */
-         @media (max-width: 768px) {
-         .whyus-section {
-         flex-direction: column;
-         min-height: auto;
-         }
-         .whyus-image {
-         width: 100%;
-         height: 250px;
-         display:none;
-         }
-         .whyus-content {
-         padding: 20px;
-         text-align: center;
-         background: url('whyususimage.png') no-repeat center center/cover;
-         height: 100%;
-         min-height: 400px;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         color: white; /* Adjust text color for readability */
-         }
-         .whyus-content h1 {
-         font-size: 40px;
-         }
-         .whyus-content p {
-         font-size: 25px;
-         }
-         }
-      </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Services</title>
+    <style>
+        
+
+        /* Wrapper to keep everything together */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Top Image Styling */
+        .top-image {
+            width: 100%;
+            height: 200px; /* Adjust as needed */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: -50px; /* Adjust to move image down or up */
+        }
+
+        /* Main Section Styling */
+        .tree-services {
+            width: 100%;
+            background-color: #005baa; /* Blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            flex-direction: column;
+            position: relative;
+            z-index: 1; /* Keeps the section above the top image */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .tree {
+            width: 100%;
+            max-width: 1440px;
+            height: auto;
+        }
+
+        /* Info Box Styling */
+        .info-box {
+            width: 220px;
+            height: 220px;
+            border-radius: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .advisor {
+            background-color: #6BCB3F;
+        }
+
+        .resources {
+            background-color: #F4A623;
+        }
+
+        /* Bottom Image Styling */
+        .bottom-image {
+            width: 100%;
+            height: 600px; /* Adjust as needed */
+            background-size: cover;
+            background-position: center;
+            margin-top: -700px; /* Adjust to move image up or down */
+            z-index: 999999999999999;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .tree {
+                max-width: 250px;
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Top Image -->
+        <div class="top-image" style="background-image: url('top-image.jpg');"></div>
+
+        <!-- Main Section -->
+        <section class="tree-services">
+            <div class="container">
+                <h2>Your Heading</h2>
+                <p>Your description text goes here.</p>
+                <img class="tree" src="tree.png" alt="yobirdietree">
+                
+                <!-- Info Boxes -->
+                <div class="info-box advisor">Dedicated Client Advisor</div>
+                <div class="info-box resources">Added Resources</div>
+            </div>
+        </section>
+
+        <!-- Bottom Image -->
+        <div class="bottom-image" style="background-image: url('treecurve.png');"></div>
+    </div>
+
+</body>
+</html>
