@@ -432,12 +432,12 @@
          }
          /* Circle with icon inside */
          .circle {
-         /*      background: url('round_nest.png') no-repeat center/cover; 
-         background-size: contain;*/
-         width: 900px;
-         height: 900px;
-         background-color: #90D812;
-         border-radius: 50%;
+           background: url('birdienest.webp') no-repeat center/cover; 
+         background-size: contain;
+         width: 850px;
+         height: 850px;
+/*         background-color: #90D812;*/
+/*         border-radius: 50%;*/
          display: flex;
          justify-content: center;
          align-items: center;
@@ -472,11 +472,13 @@
          }
          #circle-icon,
          #circle-text {
-         transform: translateY(-200px); /* Move both icon and text up */
+         transform: translateY(-109px); /* Move both icon and text up */
          font-size: 25px;
          }
          #circle-text {
          padding: 20px;
+         padding-left: 90px;
+         padding-right: 90px;
          }
          /* Arrows */
          .arrow {
@@ -489,7 +491,7 @@
          padding: 10px 10px;
          /*         border-radius: 50%;*/
          user-select: none;
-         z-index: 5;
+         z-index: 9999999999999!important;
          }
          .left-arrow {
          left: 300px;
@@ -549,10 +551,15 @@
          justify-content: center;
          align-items: center;
          flex-direction: column;
-         margin-top: 10px;
+         margin-top: 60px;
          }
          #circle-text {
          font-size: 20px;
+
+         padding: 20px;
+         padding-left: 2px;
+         padding-right: 2px;
+        
          }
          @media (max-width: 768px) { /* Mobile view */
          #circle-icon,
@@ -753,7 +760,7 @@
          height: 727px;
          width: 100%;
          position: relative;
-         margin-top: -600px;
+         margin-top: -710px;
          z-index: 999999!important;
          }
          /* 📱 Mobile Optimization */
