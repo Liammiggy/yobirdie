@@ -870,6 +870,7 @@
          /*      margin: 0 auto 0;*/
          z-index: 99999999!important;
          position: relative;
+
          }
          .why-us img {
          max-width: 740px;
@@ -879,7 +880,7 @@
          }
          .why-us-content {
          flex: 1;
-         margin: -700px 15px 0;
+         margin: -700px 105px 0;
          }
          .why-us h2 {
          font-size: 70px;
@@ -891,8 +892,8 @@
          color: #00E5E0;
          margin-bottom: 15px;
          }
-         .why-us ul {
-         list-style: none;
+         /*.why-us ul {
+         list-style: disc inside;
          padding: 0;
          }
          .why-us ul li {
@@ -904,10 +905,40 @@
          }
          .why-us ul li::before {
          content: "•";
+
          color: #00E5E0;
          font-weight: bold;
-         margin-right: 10px;
-         }
+         margin-right: 15px;
+         }*/
+.why-us ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+    margin-top: 30px;
+}
+
+.why-us ul li {
+    font-size: 25px;
+    color: #8B8B8B;
+    position: relative;
+    padding-left: 30px; /* Space for custom bullet */
+    line-height: 1.4; /* Adjust spacing */
+}
+
+.why-us ul li::before {
+    content: "•";
+    color: #00E5E0; /* Bullet color */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0; /* Aligns bullet properly with text */
+    font-size: 26px; /* Bullet size same as text */
+}
+
+
+
+
+
+
          @media (max-width: 768px) {
          .why-us {
          flex-direction: column-reverse;
@@ -922,6 +953,10 @@
          flex: 1;
          margin: 0;
          }
+         .why-us ul li::before {
+        display: none;
+       
+    }
          }
       </style>
       <style>
@@ -948,10 +983,10 @@
       <section class="why-us">
          <img src="https://liammiggy.github.io/yobirdie/birdclip.png" alt="Why Us">
          <div class="why-us-content">
-            <h2>Why YoBirdie?</h2>
+            <h2>Why CallBirdie?</h2>
             <p>Think of us as the team that's here to take your business to the next level.</p>
             <ul>
-               <li>YoBirdie streamlines the process,freeing you to focus on growth.</li>
+               <li>CallBirdie streamlines the process,freeing you to focus on growth.</li>
                <br>
                <li>We'll handle the day-to-day tasks and deliver measurable results, so you can see your dream become a reality.</li>
             </ul>
@@ -1274,7 +1309,7 @@
     <h2>More time for you, less stress<br> for your business.</h2>
     <div class="contact-info">
         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/Email.webp" alt="Email Icon" class="icon">
-        <span>info@yobirdie.com, or call us at</span>
+        <span>info@callbirdie.com, or call us at</span>
         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/phone.webp" alt="Phone Icon" class="icon">
         <span>888-888-8888</span>
     </div>
@@ -1432,7 +1467,7 @@
             <div class="contact">
                <h3>Contact Us</h3>
                <p><strong>Phone</strong><br>888-888-8888</p>
-               <p><strong>Email</strong><br>info@yobirdie.com</p>
+               <p><strong>Email</strong><br>info@callbirdie.com</p>
                <p><strong>Address</strong><br>1150 W Evelyn Ave.<br>Sunnyvale, CA 94086</p>
             </div>
             <div class="navigate">
@@ -1448,7 +1483,7 @@
          <br><br>
          <div class="footer-bottom">
             <br><br>
-            <p>All rights © yobirdie 2025</p>
+            <p>All rights © callbirdie 2025</p>
          </div>
       </footer>
        <script>
