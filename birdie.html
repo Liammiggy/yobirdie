@@ -555,8 +555,8 @@
          }
          /* Circle with icon inside */
          .circle {
-           background: url('https://liammiggy.github.io/yobirdie/birdienest.webp') no-repeat center/cover; 
-         background-size: contain;
+          /* background: url('https://liammiggy.github.io/yobirdie/birdienest.webp') no-repeat center/cover; 
+         background-size: contain;*/
          width: 850px;
          height: 850px;
 /*         background-color: #90D812;*/
@@ -626,18 +626,13 @@
          .arrow:hover {
          background: rgba(0, 0, 0, 0.6);
          }
-         @keyframes spin {
-         from {
-         transform: rotate(0deg);
-         }
-         to {
-         transform: rotate(360deg);
-         }
-         }
-         .circle.spin {
-         animation: spin 0.5s ease-in-out;
-         }
+
+
+
+       
+
          /* Mobile Styles */
+
          @media (max-width: 768px) {
          .tabs {
          width: 100%;
@@ -804,18 +799,57 @@
              document.getElementById("circle-text").textContent = tabContents[index].circleText;
              document.getElementById("circle-icon").src = tabContents[index].icon;
          
-         
-             // Add spin effect to the circle
-         // const circle = document.getElementById("circle-content");
-         // circle.classList.add("spin");
-         
-         // Remove the spin class after animation completes (0.5s)
-         // setTimeout(() => {
-         //     circle.classList.remove("spin");
-         // }, 500);
+       
+
+             const circle = document.querySelector('.circle');
+    
+    // Remove then re-add the class to retrigger animation
+    circle.classList.remove('animate-bg');
+    
+    void circle.offsetWidth; // Force reflow
+    
+    circle.classList.add('animate-bg');
          }
+
          
       </script>
+
+
+<style>
+   
+   @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.circle {
+  /* your existing styles */
+ /* position: relative;
+  overflow: hidden;*/
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://liammiggy.github.io/yobirdie/birdienest.webp') no-repeat center/cover;
+  background-size: contain;
+  z-index: 0;
+  transition: transform 1s linear;
+}
+
+.circle.animate-bg::before {
+  animation: spin 1s linear;
+}
+
+.circle > * {
+  position: relative;
+  z-index: 1;
+}
+
+</style>
+  
+
       <!-- 
          <div class="hero-line2" style="width: 100%; margin-top: -650px; position: relative; z-index: 3 !important; text-align: center;">
              <img src="./colorlines.png" alt="Hero Decorative Line" style="width: 100%;">
