@@ -11,7 +11,7 @@
          <meta name="twitter:title" content="Dedicated Support Services for Your Business Needs at Your Call">
          <meta name="twitter:description" content="Expert business support services at your fingertips. Get in touch today!">
          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        
          <title>YoBirdie</title>
          <link rel="stylesheet" href="style.css">
        
@@ -103,76 +103,7 @@
          </div>
      
       </div>
-      <script>
-         // Tab Data
-         const tabContents = [
-             { 
-                 title: "Our High-Value Services", 
-                 description: "Our expert team is always ready to assist with your unique needs",
-                 circleText: " Social Media Management, Content Creation, Graphic Design, Web Design and Development, and more in the nest!",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp"
-             },
-             { 
-                 title: "Social Media Management", 
-                 description: "We help businesses build and maintain a strong online presence accross all major social media platform",
-                 circleText: "Social Media Strategy & Planning, Account Setup & Optimization, Content Calendar Creation, Post Creation & Scheduling",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp"
-             },
-             { 
-                 title: "Graphic Design", 
-                 description: "Our Services include branding, social media graphics, marketing materials, infographics, and more design to elevate your business and communicate your message effectively",
-                 circleText: "Logo & Branding Design, Social Media Graphics & Templates, Marketing Materials (Flyers, Brochures, Poster) Business cards & Stationary Design",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp"
-             },
-             { 
-                 title: "Content Creation", 
-                 description: "Engaging content is key to attracting and retaining customers. We create high-quality blog articles, website copy, social media posts, and more, all tailored to your brand's voice and optimized for search engines and audience engagement",
-                 circleText: "Blog Writing & Article Creation, Website Copywriting, Social Media Captions & Posts, Email Newsletter Copywritting",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp"
-             },
-             { 
-                 title: "Web Design and Development", 
-                 description: "A well-designed website is your digital storefront. We create modern responsive, and user-friendly websites taiolored to your business needs.",
-                 circleText: "Custom Website Design, Website Redesign & Optimization, E-Commerce Website Development, Landing Page Design",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp"
-             }
-         ];
-         
-         let currentIndex = 0;
-         
-         function changeTab(index) {
-             if (index < 0) index = tabContents.length - 1; // Loop to last tab
-             if (index >= tabContents.length) index = 0; // Loop to first tab
-         
-             currentIndex = index;
-         
-             // Update Active Tab
-             document.querySelectorAll(".tab").forEach((tab, i) => {
-                 tab.classList.toggle("active", i === index);
-             });
-         
-             // Update Title & Description
-             document.getElementById("tab-title").textContent = tabContents[index].title;
-             document.getElementById("tab-description").textContent = tabContents[index].description;
-         
-             // Update Circle Content
-             document.getElementById("circle-text").textContent = tabContents[index].circleText;
-             document.getElementById("circle-icon").src = tabContents[index].icon;
-         
-       
-
-             const circle = document.querySelector('.circle');
-    
-    // Remove then re-add the class to retrigger animation
-    circle.classList.remove('animate-bg');
-    
-    void circle.offsetWidth; // Force reflow
-    
-    circle.classList.add('animate-bg');
-         }
-
-         
-      </script>
+   
 
 
 
@@ -271,36 +202,7 @@
             <p>All rights © callbirdie 2025</p>
          </div>
       </footer>
-       <script>
-         function toggleMenu() {
-             document.querySelector('.nav-links').classList.toggle('active');
-         }
-         </script>
-         <script >
-         function showService(index) {
-         let tabs = document.querySelectorAll('.tab');
-         let services = document.querySelectorAll('.service-item');
-         
-         tabs.forEach(tab => tab.classList.remove('active'));
-         services.forEach(service => service.classList.remove('active'));
-         
-         tabs[index].classList.add('active');
-         services[index].classList.add('active');
-         }
-         
-         </script>
-         <script>
-         function showService(index) {
-             let tabs = document.querySelectorAll('.tab');
-             let services = document.querySelectorAll('.service-item');
-         
-             tabs.forEach(tab => tab.classList.remove('active'));
-             services.forEach(service => service.classList.remove('active'));
-         
-             tabs[index].classList.add('active');
-             services[index].classList.add('active');
-         }
-         </script>
+      
          
         
    </body>
