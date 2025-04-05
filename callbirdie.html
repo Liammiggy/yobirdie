@@ -1,0 +1,307 @@
+ 
+        
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="description" content="Dedicated Support Services for Your Business Needs at Your Call. Get expert assistance whenever you need it.">
+         <meta property="og:title" content="Dedicated Support Services for Your Business Needs at Your Call">
+         <meta property="og:description" content="Get expert assistance tailored to your business needs, available whenever you need it.">
+         <meta name="twitter:title" content="Dedicated Support Services for Your Business Needs at Your Call">
+         <meta name="twitter:description" content="Expert business support services at your fingertips. Get in touch today!">
+         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+         <title>YoBirdie</title>
+         <link rel="stylesheet" href="style.css">
+       
+   </head>
+   <body>
+      <!-- NAVIGATION -->
+      <div class="navbar-container">
+         <nav class="navbar">
+            <a href="#" class="logo"><img src="https://liammiggy.github.io/yobirdie/callbirdie.png" alt="YoBirdie's Logo"></a>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="nav-links">
+               <a href="#home">Home</a>
+               <a href="#services">Services</a>  
+               <a href="#why_us">Why us</a>                    
+               <a href="#contact">Contact</a>
+                <a href="#">Articles</a>
+               <a href="#contact"  style="color:white;" class="nav-button">Book an Appointment</a>
+            </div>
+         </nav>
+      </div>
+    
+      <!-- HERO SECTION -->
+     <section id="home" style="padding-top: 80px; margin-top: -80px;"> </section>
+
+      <section class="hero">
+         <div class="hero-container">
+            <div class="hero-content">
+               <h1>Dedicated Support Services for Your Business Needs at <span style="color:#00E5E0;">Your Call</span></h1>
+               <a  href="#contact" class="btn">Book an Appointment</a>
+            </div>
+            <div class="hero-image">
+               <img src="https://liammiggy.github.io/yobirdie/heroimage.png" alt="YoBirdie">
+            </div>
+         </div>
+         <div class="hero-line">
+            <!-- <img class="bird" src="./birdline.png" alt="Hero Bird Line"> -->
+            <img src="https://liammiggy.github.io/yobirdie/colorlines.png" alt="dedicated Support">
+         </div>
+      </section>
+       
+      
+           <section class="about-section" id="about">
+   <div class="about-image"></div>
+   <div class="about-section-wrapper">
+      <div class="about-content">
+         <h1>Make Your Life Easier</h1>
+         <p>When you need that day off, know that someone has your back.</p>
+      </div>
+   </div>
+</section>
+
+
+      </head>
+      <!-- Tab Icons Section -->
+       <section id="services" style="padding-top: 80px; margin-top: -80px;"> </section>
+      <div class="tabs-container">
+         <div class="tabs">
+            <div class="tab active" onclick="changeTab(0)">
+               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab 1">
+            </div>
+            <div class="tab" onclick="changeTab(1)">
+               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp" alt="Tab 2">
+            </div>
+            <div class="tab" onclick="changeTab(2)">
+               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp" alt="Tab 3">
+            </div>
+            <div class="tab" onclick="changeTab(3)">
+               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp" alt="Tab 4">
+            </div>
+            <div class="tab" onclick="changeTab(4)">
+               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp" alt="Tab 5">
+            </div>
+         </div>
+         <!-- Dynamic Title & Description -->
+         <div class="tab-content">
+            <div class="tab-title" id="tab-title">Our High-Value Services</div>
+            <div class="tab-description" id="tab-description">Our expert team is always ready to assist with your unique needs</div>
+         </div>
+         <!-- Circle with Icon Inside -->
+         <div class="content-container">
+            <div class="arrow left-arrow" onclick="changeTab(currentIndex - 1)">&#10094;</div>
+            <!-- Left Arrow -->
+            <div class="circle" id="circle-content">
+               <img id="circle-icon" src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab Icon">
+               <div id="circle-text">Social Media Management, Content Creation, Graphic Design, Web Design and Development, and more in the nest!</div>
+            </div>
+            <div class="arrow right-arrow" onclick="changeTab(currentIndex + 1)">&#10095;</div>
+            <!-- Right Arrow -->
+         </div>
+     
+      </div>
+      <script>
+         // Tab Data
+         const tabContents = [
+             { 
+                 title: "Our High-Value Services", 
+                 description: "Our expert team is always ready to assist with your unique needs",
+                 circleText: " Social Media Management, Content Creation, Graphic Design, Web Design and Development, and more in the nest!",
+                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp"
+             },
+             { 
+                 title: "Social Media Management", 
+                 description: "We help businesses build and maintain a strong online presence accross all major social media platform",
+                 circleText: "Social Media Strategy & Planning, Account Setup & Optimization, Content Calendar Creation, Post Creation & Scheduling",
+                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp"
+             },
+             { 
+                 title: "Graphic Design", 
+                 description: "Our Services include branding, social media graphics, marketing materials, infographics, and more design to elevate your business and communicate your message effectively",
+                 circleText: "Logo & Branding Design, Social Media Graphics & Templates, Marketing Materials (Flyers, Brochures, Poster) Business cards & Stationary Design",
+                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp"
+             },
+             { 
+                 title: "Content Creation", 
+                 description: "Engaging content is key to attracting and retaining customers. We create high-quality blog articles, website copy, social media posts, and more, all tailored to your brand's voice and optimized for search engines and audience engagement",
+                 circleText: "Blog Writing & Article Creation, Website Copywriting, Social Media Captions & Posts, Email Newsletter Copywritting",
+                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp"
+             },
+             { 
+                 title: "Web Design and Development", 
+                 description: "A well-designed website is your digital storefront. We create modern responsive, and user-friendly websites taiolored to your business needs.",
+                 circleText: "Custom Website Design, Website Redesign & Optimization, E-Commerce Website Development, Landing Page Design",
+                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp"
+             }
+         ];
+         
+         let currentIndex = 0;
+         
+         function changeTab(index) {
+             if (index < 0) index = tabContents.length - 1; // Loop to last tab
+             if (index >= tabContents.length) index = 0; // Loop to first tab
+         
+             currentIndex = index;
+         
+             // Update Active Tab
+             document.querySelectorAll(".tab").forEach((tab, i) => {
+                 tab.classList.toggle("active", i === index);
+             });
+         
+             // Update Title & Description
+             document.getElementById("tab-title").textContent = tabContents[index].title;
+             document.getElementById("tab-description").textContent = tabContents[index].description;
+         
+             // Update Circle Content
+             document.getElementById("circle-text").textContent = tabContents[index].circleText;
+             document.getElementById("circle-icon").src = tabContents[index].icon;
+         
+       
+
+             const circle = document.querySelector('.circle');
+    
+    // Remove then re-add the class to retrigger animation
+    circle.classList.remove('animate-bg');
+    
+    void circle.offsetWidth; // Force reflow
+    
+    circle.classList.add('animate-bg');
+         }
+
+         
+      </script>
+
+
+
+       <section id="why_us" style="padding-top: 80px; margin-top: -80px;"><p>Why Us section</p> </section>
+      <section class="curve-bg"></section>      
+      <section class="why-us">
+         <img src="https://liammiggy.github.io/yobirdie/birdclip.png" alt="Why Us">
+         <div class="why-us-content">
+            <h2>Why CallBirdie?</h2>
+            <p>Think of us as the team that's here to take your business to the next level.</p>
+            <ul>
+               <li>CallBirdie streamlines the process,freeing you to focus on growth.</li>
+               <br>
+               <li>We'll handle the day-to-day tasks and deliver measurable results, so you can see your dream become a reality.</li>
+            </ul>
+         </div>
+      </section>
+     
+      <section class="tree-services" id="services">
+         <section class="tree-container">
+            <section class="intro-section">
+               <div class="intro-text">
+                  <p>LET'S GET THIS SHOW ON THE ROAD</p>
+                  <h2>Our Approach Makes All the Difference</h2>
+                  <p>Find your right solution here. Get a Client Advocate<br> with the right connections on your side.</p>
+               </div>
+            </section>
+            <img style ="width: 841px;" class="tree" src="https://liammiggy.github.io/yobirdie/tree.png" alt="yobirdietree">
+            <!-- Dedicated Client Advisor -->
+            <div class="info-box advisor">Dedicated Client Advisor</div>
+            <div class="line line-left"></div>
+            <div class="text-box text-left">
+               To help you build your online presence from scratch to operations (40 hours resource access)
+            </div>
+            <!-- Added Resources -->
+            <div class="info-box resources">Added Resources</div>
+            <div class="line line-right"></div>
+            <div class="text-box text-right">
+               Hourly, additional resources for special projects
+            </div>
+         </section>
+      </section>
+
+
+
+ <section id="contact" style="padding-top: 80px; margin-top: -80px;"><p></p> </section>
+      <section class="contact-section">
+    <h2>More time for you, less stress<br> for your business.</h2>
+    <div class="contact-info">
+        <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/Email.webp" alt="Email Icon" class="icon">
+        <span>info@callbirdie.com, or call us at</span>
+        <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/phone.webp" alt="Phone Icon" class="icon">
+        <span>888-888-8888</span>
+    </div>
+    <h3>Book an Appoinment</h3>
+
+            <div class="calendly-inline-widget" id="calendly-embedded" 
+        data-url="https://calendly.com/basil-yobirdie/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=00d3f9&text_color=ffffff"
+        style="min-width: 320px; height: 700px;">
+    </div>
+</section>
+
+      
+         
+     
+      <footer class="footer">
+         <div class="footer-container">
+            <div class="newsletter">
+               <h2>Subscribe to our newsletter</h2>
+               <form>
+                  <input type="email" placeholder="Email Address">
+                  <button type="submit">Submit</button>
+               </form>
+            </div>
+            <div class="contact">
+               <h3>Contact Us</h3>
+               <p><strong>Phone</strong><br>888-888-8888</p>
+               <p><strong>Email</strong><br>info@callbirdie.com</p>
+               <p><strong>Address</strong><br>1150 W Evelyn Ave.<br>Sunnyvale, CA 94086</p>
+            </div>
+            <div class="navigate">
+               <h3>Navigate</h3>
+               <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#why_us">Why us</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#">Articles</a></li>
+
+               </ul>
+            </div>
+         </div>
+         <br><br>
+         <div class="footer-bottom">
+            <br><br>
+            <p>All rights © callbirdie 2025</p>
+         </div>
+      </footer>
+       <script>
+         function toggleMenu() {
+             document.querySelector('.nav-links').classList.toggle('active');
+         }
+         </script>
+         <script >
+         function showService(index) {
+         let tabs = document.querySelectorAll('.tab');
+         let services = document.querySelectorAll('.service-item');
+         
+         tabs.forEach(tab => tab.classList.remove('active'));
+         services.forEach(service => service.classList.remove('active'));
+         
+         tabs[index].classList.add('active');
+         services[index].classList.add('active');
+         }
+         
+         </script>
+         <script>
+         function showService(index) {
+             let tabs = document.querySelectorAll('.tab');
+             let services = document.querySelectorAll('.service-item');
+         
+             tabs.forEach(tab => tab.classList.remove('active'));
+             services.forEach(service => service.classList.remove('active'));
+         
+             tabs[index].classList.add('active');
+             services[index].classList.add('active');
+         }
+         </script>
+         
+        
+   </body>
+</html>
