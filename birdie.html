@@ -1,3 +1,5 @@
+ 
+        
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -9,6 +11,7 @@
          <meta name="twitter:title" content="Dedicated Support Services for Your Business Needs at Your Call">
          <meta name="twitter:description" content="Expert business support services at your fingertips. Get in touch today!">
          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
          <title>YoBirdie</title>
          <style>
          * {
@@ -66,8 +69,12 @@
          transition: 0.3s;
          }
          .nav-button:hover {
-         background: #012269;
+         background: #00E5E0;
+             transform: scale(1.05); /* Slight zoom */
+         
          }
+
+
          /* BURGER MENU */
          .burger {
          display: none;
@@ -110,12 +117,12 @@
             <a href="#" class="logo"><img src="https://liammiggy.github.io/yobirdie/callbirdie.png" alt="YoBirdie's Logo"></a>
             <div class="burger" onclick="toggleMenu()">☰</div>
             <div class="nav-links">
-               <a href="#">Home</a>
-               <a href="#">About</a>
-               <a href="#">Services</a>       
-               <a href="#">Contact</a>
+               <a href="#home">Home</a>
+               <a href="#services">Services</a>  
+               <a href="#why_us">Why us</a>                    
+               <a href="#contact">Contact</a>
                 <a href="#">Articles</a>
-               <a href="#"  style="color:white;" class="nav-button">Book an Appointment</a>
+               <a href="#contact"  style="color:white;" class="nav-button">Book an Appointment</a>
             </div>
          </nav>
       </div>
@@ -160,7 +167,8 @@
          transition: 0.3s;
          }
          .hero-content .btn:hover {
-         background: #012269;
+         box-shadow: 0 0 0 2px #012269; /* Outside stroke */
+         transform: scale(1.05); /* Slight zoom */
          }
          .hero-image {
          position: absolute;
@@ -224,11 +232,13 @@
          }
       </style>
       <!-- HERO SECTION -->
+     <section id="home" style="padding-top: 80px; margin-top: -80px;"> </section>
+
       <section class="hero">
          <div class="hero-container">
             <div class="hero-content">
                <h1>Dedicated Support Services for Your Business Needs at <span style="color:#00E5E0;">Your Call</span></h1>
-               <a  href="#" class="btn">Book an Appointment</a>
+               <a  href="#contact" class="btn">Book an Appointment</a>
             </div>
             <div class="hero-image">
                <img src="https://liammiggy.github.io/yobirdie/heroimage.png" alt="YoBirdie">
@@ -239,6 +249,7 @@
             <img src="https://liammiggy.github.io/yobirdie/colorlines.png" alt="dedicated Support">
          </div>
       </section>
+       
       <style>
          .hero-line {
          width: 100vw; /* Full width */
@@ -281,7 +292,7 @@
          }
       </style>
 
-           <section class="about-section">
+           <section class="about-section" id="about">
    <div class="about-image"></div>
    <div class="about-section-wrapper">
       <div class="about-content">
@@ -639,7 +650,7 @@
          display: flex;
          flex-wrap: wrap;
          justify-content: center;
-         gap: 40px;
+         gap: 30px;
          }
          .tab {
          flex: 0 0 auto;
@@ -702,6 +713,7 @@
       </style>
       </head>
       <!-- Tab Icons Section -->
+       <section id="services" style="padding-top: 80px; margin-top: -80px;"> </section>
       <div class="tabs-container">
          <div class="tabs">
             <div class="tab active" onclick="changeTab(0)">
@@ -955,7 +967,7 @@
          }
          .why-us ul li::before {
         display: none;
-       
+
     }
          }
       </style>
@@ -979,7 +991,8 @@
          }
          }
       </style>
-      <section class="curve-bg"></section>
+       <section id="why_us" style="padding-top: 80px; margin-top: -80px;"><p>Why Us section</p> </section>
+      <section class="curve-bg"></section>      
       <section class="why-us">
          <img src="https://liammiggy.github.io/yobirdie/birdclip.png" alt="Why Us">
          <div class="why-us-content">
@@ -1195,7 +1208,7 @@
          }
          }
       </style>
-      <section class="tree-services">
+      <section class="tree-services" id="services">
          <section class="tree-container">
             <section class="intro-section">
                <div class="intro-text">
@@ -1305,6 +1318,7 @@
 
 
 </style>
+ <section id="contact" style="padding-top: 80px; margin-top: -80px;"><p></p> </section>
       <section class="contact-section">
     <h2>More time for you, less stress<br> for your business.</h2>
     <div class="contact-info">
@@ -1517,7 +1531,6 @@
          }
          </script>
          
-         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         
    </body>
 </html>
