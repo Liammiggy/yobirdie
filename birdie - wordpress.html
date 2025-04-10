@@ -13,119 +13,184 @@
          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
          <title>YoBirdie</title>
-         <style>
-         * {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-         font-family: 'Nunito', sans-serif;
-         }
-         body {
-         /*         background: red;*/
-         overflow-x: hidden;
-         }
-         /* STICKY NAVIGATION */
-         .navbar-container {
-         width: 100%;
-         position: sticky;
-         top: 0;
-         left: 0;
-         background: white;
-         backdrop-filter: blur(10px);
-         z-index: 999999999999999999 !important;
-         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-         }
-         .navbar {
-         max-width: 1280px;
-         margin: 0 auto;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding: 10px ;
-         }
-         .navbar .logo img {
-         max-height: 40px;
-         }
-         .nav-links {
-         display: flex;
-         align-items: center;
-         gap: 30px;
-         }
-         .nav-links a {
-         text-decoration: none;
-         color: #012269;
-         font-size: 18px;
-         transition: 0.1s;
-         }
-         .nav-links a:hover {
-         color: #0079C0;
-         }
-         .nav-button {
-         padding: 10px 20px;
-         background: #00E5E0;
-         text-decoration: none;
-         font-size: 1.2rem;
-         border-radius: 30px;
-         transition: 0.3s;
-         }
-         .nav-button:hover {
-         background: #00E5E0;
-             transform: scale(1.05); /* Slight zoom */
-         
-         }
+        
 
 
-         /* BURGER MENU */
-         .burger {
-         display: none;
-         font-size: 2rem;
-         cursor: pointer;
-         color: #00E5E0;
-         }
-         @media (max-width: 768px) {
-         .navbar {
-         padding: 15px 20px;
-         }
-         .burger {
-         display: block;
-         }
-         .nav-links {
-         display: none;
-         position: absolute;
-         top: 60px;
-         right: 20px;
-         background: #012269;
-         flex-direction: column;
-         gap: 15px;
-         padding: 20px;
-         border-radius: 5px;
-         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-         }
-         .nav-links a {
-         color: white;
-         }
-         .nav-links.active {
-         display: flex;
-         }       
-         }
-      </style>
-   </head>
-   <body>
-      <!-- NAVIGATION -->
-      <div class="navbar-container">
-         <nav class="navbar">
-            <a href="#" class="logo"><img src="https://liammiggy.github.io/yobirdie/callbirdie.png" alt="YoBirdie's Logo"></a>
-            <div class="burger" onclick="toggleMenu()">☰</div>
-            <div class="nav-links">
-               <a href="#home">Home</a>
-               <a href="#services">Services</a>  
-               <a href="#why_us">About us</a>                    
-               <a href="#contact">Contact</a>
-                <a href="#">Articles</a>
-               <a href="#contact"  style="color:white;" class="nav-button">Book an Appointment</a>
-            </div>
-         </nav>
-      </div>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: white;
+    backdrop-filter: blur(10px);
+    z-index: 9999999999999;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar .logo img {
+    max-height: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #012269;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .nav-links a:hover {
+    color: #0079C0;
+  }
+
+  .nav-button {
+    padding: 10px 20px;
+    background: #00E5E0;
+    color: white;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-button:hover {
+    transform: scale(1.05);
+    background: #00d2cd;
+  }
+
+  .burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #00E5E0;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+
+  /* Updated for tablets and phones */
+  @media (max-width: 1024px) {
+    .burger {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: #012269;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+      width: calc(100% - 40px);
+      max-width: 320px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-links a {
+      color: white;
+      width: 100%;
+      padding: 10px 0;
+       text-align: center;
+    }
+
+    .nav-button {
+      background: #00E5E0;
+      color: white;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .navbar {
+      flex-wrap: wrap;
+    }
+  }
+</style>
+
+
+<!-- NAVIGATION -->
+<div class="navbar-container">
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="https://liammiggy.github.io/yobirdie/callbirdie.png" alt="YoBirdie's Logo">
+    </a>
+
+    <div class="burger" id="burger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why_us">About us</a>
+      <a href="#contact">Contact</a>
+      <!-- <a href="#">Articles</a> -->
+      <a href="#contact" class="nav-button">Book an Appointment</a>
+    </div>
+  </nav>
+</div>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    const burger = document.getElementById('burger');
+
+    nav.classList.toggle('active');
+
+    // Toggle icon
+    if (nav.classList.contains('active')) {
+      burger.textContent = '✖';
+    } else {
+      burger.textContent = '☰';
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
       <style>/* HERO SECTION */
          .hero {
          width: 100%;
@@ -137,6 +202,7 @@
          position: relative;
          color: white;
          overflow: hidden; /* Prevents extra spacing */
+
          }
          .hero-container {
          width: 1280px;
@@ -174,7 +240,7 @@
          position: absolute;
          top: 0;
          right: 0;
-         width: 60vw; /* Uses viewport width for better responsiveness */
+         width: 90vw; /* Uses viewport width for better responsiveness */
          height: 100%;
          display: flex;
          align-items: flex-start;
@@ -191,6 +257,19 @@
          }
          /* Mobile Optimization */
 
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    max-width: 55%;
+    margin-top: -200px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+}
 
          @media screen and (max-width: 768px) {
          .hero {
@@ -281,6 +360,15 @@
 
 
       </style>
+
+
+
+
+
+
+
+
+
       <style>
          .bird {
          position: absolute; /* Stays inside .hero-line */
@@ -299,7 +387,7 @@
          }
       </style>
 
-           <section class="about-section" id="about">
+           <section class="about-section" id="about" >  
    <div class="about-image"></div>
    <div class="about-section-wrapper">
       <div class="about-content">
@@ -326,7 +414,7 @@
       width: 50%;
       background: url('https://liammiggy.github.io/yobirdie/horseGradient.webp') no-repeat center center;
       background-size: cover;
-      z-index: 99999999 !important;
+      z-index: 99999 !important;
     
       
 
@@ -364,6 +452,8 @@
       line-height: 1.5;
       color: #8B8B8B;
    }
+
+
 
   /* Mobile Responsive */
    @media (max-width: 768px) {
@@ -720,7 +810,7 @@
       </style>
       </head>
       <!-- Tab Icons Section -->
-       <section id="services" style="padding-top: 80px; margin-top: -80px;"> </section>
+       <section id="services" style=" padding-top: 68px; margin-top:-68px"> </section>
       <div class="tabs-container">
          <div class="tabs">
             <div class="tab active" onclick="changeTab(0)">
@@ -998,11 +1088,12 @@
          }
          }
       </style>
-       <section id="why_us" style="padding-top: 80px; margin-top: -80px;"><p>Why Us section</p> </section>
+      
       <section class="curve-bg"></section>      
       <section class="why-us">
          <img src="https://liammiggy.github.io/yobirdie/birdclip.png" alt="Why Us">
          <div class="why-us-content">
+             <section id="why_us" style="padding-top: 60px; margin-top: -80px;"><p></p> </section>
             <h2>Why CallBirdie?</h2>
             <p>Think of us as the team that's here to take your business to the next level.</p>
             <ul>
@@ -1335,156 +1426,221 @@
 
 
 </style>
- <section id="contact" style="padding-top: 80px; margin-top: -80px;"><p></p> </section>
-      <section class="contact-section">
-    <h2>More time for you, less stress<br> for your business.</h2>
-    <div class="contact-info">
-        <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/Email.webp" alt="Email Icon" class="icon">
-        <span>info@callbirdie.com, or call us at</span>
-        <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/phone.webp" alt="Phone Icon" class="icon">
-        <span>888-888-8888</span>
-    </div>
-    <h3>Book an Appoinment</h3>
 
+      <section class="contact-section">
+        <section id="contact" style="padding-top: 80px; margin-top: -80px;"><p></p> </section>
+    <!-- <h2>More time for you, less stress<br> for your business.</h2> -->
+    <div class="contact-info">
+        <!-- <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/Email.webp" alt="Email Icon" class="icon"> -->
+       <!--  <span>info@callbirdie.com, or call us at</span>
+        <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/phone.webp" alt="Phone Icon" class="icon">
+        <span>888-888-8888</span> -->
+    </div>
+     <h3>Book an Appoinment</h3>
             <div class="calendly-inline-widget" id="calendly-embedded" 
         data-url="https://calendly.com/basil-yobirdie/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=00d3f9&text_color=ffffff"
         style="min-width: 320px; height: 700px;">
     </div>
+   <h2>More time for you, less stress<br> for your business.</h2>
+
 </section>
 
       
          
         
       <style>
-         .footer {
-         background: linear-gradient(to bottom, #003580, #00245a); /* Dark blue gradient */
-         color: white;
-         padding: 100px 0 10px 0;
-         }
-         .footer-container {
-         display: flex;
-         justify-content: space-between;
-         align-items: flex-start;
-         max-width: 1280px; /* Constraint width */
-         width: 100%;
-         margin: auto;
-         flex-wrap: wrap;
-         gap: 200px; /* Adjusted for better spacing */
-         }
-         .newsletter {
-         flex: 1.5;
-         min-width: 320px;
-         text-align: left;
-         }
-         .newsletter h2 {
-         font-size: 36px;
-         margin-bottom: 25px;
-         }
-         .newsletter form {
-         display: flex;
-         align-items: center;
-         gap: 20px;
-         max-width: 700px;
-         }
-         .newsletter input {
-         flex: 1;
-         padding: 12px 16px;
-         border: 2px solid #00d4ff;
-         border-radius: 50px;
-         background: transparent;
-         color: white;
-         font-size: 1rem;
-         outline: none;
-         }
-         .newsletter input::placeholder {
-         color: rgba(255, 255, 255, 0.7);
-         }
-         .newsletter button {
-         background-color: #00d4ff;
-         color: #00245a;
-         border: none;
-         padding: 12px 24px;
-         border-radius: 50px;
-         cursor: pointer;
-         font-weight: bold;
-         transition: 0.3s;
-         }
-         .newsletter button:hover {
-         background-color: #00aacc;
-         }
-         .contact, .navigate {
-         flex: 1;
-         min-width: 250px;
-         text-align: left;
-         }
-         .contact h3, .navigate h3 {
-         font-size: 1.2rem;
-         margin-bottom: 12px;
-         }
-        
-         .contact p {
-         margin: 15px 0;
-         font-size: 16px;
-         font-weight: regular;
-         line-height: 25px;
-         }
-         .navigate ul {
-         list-style: none;
-         padding: 0;
-         margin: 15px 0;
-         }
-         .navigate ul li {
-         margin-bottom: 6px;
-         }
-         .navigate ul li a {
-         color: white;
-         text-decoration: none;
-         font-size: 16px;
-         line-height: 25px;
-         }
-         .footer-bottom {
-         text-align: center;
-         padding-top: 20px;
-         border-top: 1px solid #00d4ff;
-         margin-top: 30px;
-         }
-         .footer-bottom p {
-         font-size: 0.8rem;
-         }
-         /* 📱 Mobile Adjustments */
-         @media (max-width: 768px) {
-         .footer-container {
-         flex-direction: column;
-         text-align: center;
-         align-items: center;
-         gap: 25px;
-         }
-         .newsletter form {
-         flex-direction: column;
-         gap: 10px;
-         max-width: 100%;
-         }
-         .newsletter input {
-         width: 80%;
-         text-align: center;
-         padding: 12px;
-         }
-         .newsletter button {
-         width: 80%;
-         padding: 12px;
-         }
-         .contact, .navigate {
-         text-align: center;
-         }
-         h2
-         {
-            text-align: center;
-         }
-         .navigate ul {
-         padding: 0;
-         }
-         }
-      </style>
+   .footer {
+      background: linear-gradient(to bottom, #003580, #00245a); /* Dark blue gradient */
+      color: white;
+      padding: 100px 30px 10px 30px; /* Added equal padding on both sides */
+      text-align: center; /* Center text by default */
+   }
+   .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1280px; /* Constraint width */
+      width: 100%;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 50px; /* Reduced gap for better responsiveness */
+      justify-content: center; /* Center the content */
+   }
+   .newsletter {
+      flex: 1.5;
+      min-width: 320px;
+      text-align: left;
+   }
+   .newsletter h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+   }
+   .newsletter form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 700px;
+      margin: auto; /* Center form */
+   }
+   .newsletter input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 2px solid #00d4ff;
+      border-radius: 50px;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+   }
+   .newsletter input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+   }
+   .newsletter button {
+      background-color: #00d4ff;
+      color: #00245a;
+      border: none;
+      padding: 12px 10px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+   
+   }
+   .newsletter button:hover {
+      background-color: #00aacc;
+   }
+   .contact, .navigate {
+      flex: 1;
+      min-width: 250px;
+      text-align: left;
+   }
+   .contact h3, .navigate h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+   }
+   .contact p {
+      margin: 15px 0;
+      font-size: 16px;
+      font-weight: regular;
+      line-height: 25px;
+   }
+   .navigate ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+   }
+   .navigate ul li {
+      margin-bottom: 6px;
+   }
+   .navigate ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 25px;
+   }
+   .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #00d4ff;
+      margin-top: 30px;
+   }
+   .footer-bottom p {
+      font-size: 0.8rem;
+   }
+
+   @media (max-width: 768px) {
+   .footer-container {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 25px;
+      padding: 0 20px; /* Added equal padding on both sides */
+   }
+   .newsletter form {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%; /* Ensure form takes full width */
+   }
+   .newsletter input {
+      width: 100%; /* Input field takes full width */
+      text-align: center;
+      padding: 12px;
+   }
+   .newsletter button {
+      width: 100%; /* Button takes full width */
+      padding: 12px;
+   }
+   .contact, .navigate {
+      text-align: center;
+      width: 100%; /* Ensure contact and navigation take full width */
+   }
+   h2 {
+      text-align: center;
+      font-size: 28px;
+   }
+   .navigate ul {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+   }
+   .navigate ul li {
+      margin-bottom: 12px;
+   }
+}
+
+/* 📱 Tablet & Small Device Adjustments (960px and below) */
+@media (max-width: 960px) {
+   .footer-container {
+      flex-direction: column; /* Stack the sections vertically */
+      gap: 30px; /* Increased gap to make the sections more spaced out */
+   }
+   .newsletter {
+      width: 90%; /* Ensure the newsletter takes up most of the container */
+      margin: auto;
+   }
+   .contact, .navigate {
+      width: 100%; /* Ensure contact and navigation take full width */
+      text-align: center;
+   }
+   .contact p, .navigate ul {
+      text-align: center; /* Center text for contact and navigation */
+   }
+}
+
+   /* Tablet Adjustments */
+   @media (max-width: 1024px) {
+      .footer-container {
+         gap: 30px; /* Reduced gap for tablet */
+         padding: 0 20px; /* Equal padding for tablet */
+      }
+      .newsletter input {
+         width: 75%; /* Reduced input width for tablets */
+      }
+      .newsletter button {
+         width: 40%; /* Reduced button width for tablets */
+      }
+      .contact, .navigate {
+         width: 100%; /* Ensure contact and navigation take full width */
+      }
+   }
+
+   /* Desktop Adjustments */
+   @media (min-width: 1025px) {
+      .footer-container {
+         gap: 100px; /* Larger gap for desktop */
+         padding: 0 30px; /* Balanced padding for desktop */
+      }
+      .newsletter input {
+         width: 60%;
+      }
+      .newsletter button {
+         width: 40%;
+      }
+   }
+</style>
+
+
+
       <!-- <img style="margin-bottom: -50px"; src="footercurve.png" alt="Hero Decorative Line"> -->
       <footer class="footer">
          <div class="footer-container">
@@ -1519,11 +1675,7 @@
             <p>All rights © callbirdie 2025</p>
          </div>
       </footer>
-       <script>
-         function toggleMenu() {
-             document.querySelector('.nav-links').classList.toggle('active');
-         }
-         </script>
+      
          <script >
          function showService(index) {
          let tabs = document.querySelectorAll('.tab');
