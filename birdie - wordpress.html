@@ -28,7 +28,8 @@
     overflow-x: hidden;
   }
 
-  .navbar-container {
+
+  .birdie-navbar-container {
     width: 100%;
     position: sticky;
     top: 0;
@@ -39,7 +40,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .navbar {
+  .birdie-navbar {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -48,28 +49,29 @@
     padding: 10px 20px;
   }
 
-  .navbar .logo img {
+  .birdie-navbar .logo img {
     max-height: 40px;
   }
 
-  .nav-links {
+  .birdie-nav-links {
     display: flex;
     align-items: center;
     gap: 25px;
+    text-decoration: none !important;
   }
 
-  .nav-links a {
+  .birdie-nav-links a {
     text-decoration: none;
     color: #012269;
     font-size: 18px;
     transition: 0.2s ease-in-out;
   }
 
-  .nav-links a:hover {
+  .birdie-nav-links a:hover {
     color: #0079C0;
   }
 
-  .nav-button {
+  .birdie-nav-button {
     padding: 10px 20px;
     background: #00E5E0;
     color: white;
@@ -80,12 +82,12 @@
     white-space: nowrap;
   }
 
-  .nav-button:hover {
+  .birdie-nav-button:hover {
     transform: scale(1.05);
     background: #00d2cd;
   }
 
-  .burger {
+  .birdie-burger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
@@ -97,11 +99,11 @@
 
   /* Updated for tablets and phones */
   @media (max-width: 1024px) {
-    .burger {
+    .birdie-burger {
       display: block;
     }
 
-    .nav-links {
+    .birdie-nav-links {
       display: none;
       position: absolute;
       top: 70px;
@@ -118,18 +120,18 @@
       transition: all 0.3s ease;
     }
 
-    .nav-links.active {
+    .birdie-nav-links.active {
       display: flex;
     }
 
-    .nav-links a {
+    .birdie-nav-links a {
       color: white;
       width: 100%;
       padding: 10px 0;
        text-align: center;
     }
 
-    .nav-button {
+    .birdie-nav-button {
       background: #00E5E0;
       color: white;
       text-align: center;
@@ -138,7 +140,7 @@
       margin-top: 10px;
     }
 
-    .navbar {
+    .birdie-navbar {
       flex-wrap: wrap;
     }
   }
@@ -146,28 +148,28 @@
 
 
 <!-- NAVIGATION -->
-<div class="navbar-container">
-  <nav class="navbar">
+<div class="birdie-navbar-container">
+  <nav class="birdie-navbar">
     <a href="#" class="logo">
       <img src="https://liammiggy.github.io/yobirdie/callbirdie.png" alt="YoBirdie's Logo">
     </a>
 
-    <div class="burger" id="burger" onclick="toggleMenu()">☰</div>
+    <div class="birdie-burger" id="birdie-burger" onclick="toggleMenu()">☰</div>
 
-    <div class="nav-links">
+    <div class="birdie-nav-links">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#why_us">About us</a>
       <a href="#contact">Contact</a>
       <!-- <a href="#">Articles</a> -->
-      <a href="#contact" class="nav-button">Book an Appointment</a>
+      <a href="#contact" class="birdie-nav-button">Book an Appointment</a>
     </div>
   </nav>
 </div>
 
 <script>
   function toggleMenu() {
-    const nav = document.querySelector('.nav-links');
+    const nav = document.querySelector('.birdie-nav-links');
     const burger = document.getElementById('burger');
 
     nav.classList.toggle('active');
@@ -326,7 +328,7 @@
             </div>
          </div>
          <div class="hero-line">
-            <!-- <img class="bird" src="./birdline.png" alt="Hero Bird Line"> -->
+            <!-- /<img class="bird" src="https://liammiggy.github.io/yobirdie/Bird-animation-01.gif" alt="Hero Bird Line"> -->
             <img src="https://liammiggy.github.io/yobirdie/colorlines.png" alt="dedicated Support">
          </div>
       </section>
@@ -744,7 +746,7 @@
         position: absolute;
         
         transform: translateX(100%);
-         transform: translateY(-450px);        
+         transform: translateY(-400px);        
     }
     .right-arrow {
     right: 300px;
@@ -1130,6 +1132,7 @@
 }
 
       </style>
+
       <style>
          .curve-bg {
          background: url('https://liammiggy.github.io/yobirdie/nestcurve.png') no-repeat center top;
