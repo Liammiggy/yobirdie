@@ -1,187 +1,177 @@
- 
-        
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <meta name="description" content="Dedicated Support Services for Your Business Needs at Your Call. Get expert assistance whenever you need it.">
-         <meta property="og:title" content="Dedicated Support Services for Your Business Needs at Your Call">
-         <meta property="og:description" content="Get expert assistance tailored to your business needs, available whenever you need it.">
-         <meta name="twitter:title" content="Dedicated Support Services for Your Business Needs at Your Call">
-         <meta name="twitter:description" content="Expert business support services at your fingertips. Get in touch today!">
-         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-         <title>YoBirdie</title>
-        
 
-
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-
-
-  .birdie-navbar-container {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background: white;
-    backdrop-filter: blur(10px);
-    z-index: 9999999999999;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .birdie-navbar {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-
-  .birdie-navbar .logo img {
-    max-height: 40px;
-  }
-
-  .birdie-nav-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    text-decoration: none !important;
-  }
-
-  .birdie-nav-links a {
-    text-decoration: none;
-    color: #012269;
-    font-size: 18px;
-    transition: 0.2s ease-in-out;
-  }
-
-  .birdie-nav-links a:hover {
-    color: #0079C0;
-  }
-
-  .birdie-nav-button {
-    padding: 10px 20px;
-    background: #00E5E0;
-    color: white;
-    font-size: 1rem;
-    border-radius: 30px;
-    transition: 0.3s ease-in-out;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .birdie-nav-button:hover {
-    transform: scale(1.05);
-    background: #00d2cd;
-  }
-
-  .birdie-burger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #00E5E0;
-  user-select: none;
-  transition: transform 0.2s ease;
-}
-
-
-  /* Updated for tablets and phones */
-  @media (max-width: 1024px) {
-    .birdie-burger {
-      display: block;
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description"
+      content="Dedicated Support Services for Your Business Needs at Your Call. Get expert assistance whenever you need it.">
+   <meta property="og:title" content="Dedicated Support Services for Your Business Needs at Your Call">
+   <meta property="og:description"
+      content="Get expert assistance tailored to your business needs, available whenever you need it.">
+   <meta name="twitter:title" content="Dedicated Support Services for Your Business Needs at Your Call">
+   <meta name="twitter:description" content="Expert business support services at your fingertips. Get in touch today!">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+   <title>YoBirdie</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Nunito', sans-serif;
     }
 
-    .birdie-nav-links {
-      display: none;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      background: #012269;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
-      width: calc(100% - 40px);
-      max-width: 320px;
-      transition: all 0.3s ease;
+    body {
+      overflow-x: hidden;
     }
 
-    .birdie-nav-links.active {
-      display: flex;
-    }
-
-    .birdie-nav-links a {
-      color: white;
+    .navbar-container {
       width: 100%;
-      padding: 10px 0;
-       text-align: center;
+      position: sticky;
+      top: 0;
+      left: 0;
+      background: white;
+      backdrop-filter: blur(10px);
+      z-index: 9999999999999999;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .birdie-nav-button {
+    .navbar {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar .logo img {
+      max-height: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #012269;
+      font-size: 18px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #0079C0;
+    }
+
+    .nav-button {
+      padding: 10px 20px;
       background: #00E5E0;
       color: white;
-      text-align: center;
-      display: inline-block;
-      width: 100%;
-      margin-top: 10px;
+      font-size: 1rem;
+      border-radius: 30px;
+      transition: 0.3s ease-in-out;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    .birdie-navbar {
-      flex-wrap: wrap;
+    .nav-button:hover {
+      transform: scale(1.05);
+      background: #00d2cd;
     }
-  }
-</style>
 
-
-<!-- NAVIGATION -->
-<div class="birdie-navbar-container">
-  <nav class="birdie-navbar">
-    <a href="#" class="logo">
-      <img src="https://liammiggy.github.io/yobirdie/callbirdie.png" alt="YoBirdie's Logo">
-    </a>
-
-    <div class="birdie-burger" id="birdie-burger" onclick="toggleMenu()">☰</div>
-
-    <div class="birdie-nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#why_us">About us</a>
-      <a href="#contact">Contact</a>
-      <!-- <a href="#">Articles</a> -->
-      <a href="#contact" class="birdie-nav-button">Book an Appointment</a>
-    </div>
-  </nav>
-</div>
-
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('.birdie-nav-links');
-    const burger = document.getElementById('burger');
-
-    nav.classList.toggle('active');
-
-    // Toggle icon
-    if (nav.classList.contains('active')) {
-      burger.textContent = '✖';
-    } else {
-      burger.textContent = '☰';
+    .burger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #00E5E0;
+      user-select: none;
+      transition: transform 0.2s ease;
     }
-  }
-</script>
+
+    @media (max-width: 1024px) {
+      .burger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #012269;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        width: calc(100% - 40px);
+        max-width: 320px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        color: white;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      .nav-button {
+        background: #00E5E0;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <div class="navbar-container">
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="https://liammiggy.github.io/yobirdie/callbirdie.png" alt="YoBirdie's Logo">
+      </a>
+      <div class="burger" id="burger" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#why_us">About us</a>
+        <a href="#contact">Contact</a>       
+        <a href="#contact" class="nav-button" style="color: white";>Book an Appointment</a>
+      </div>
+    </nav>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      const burger = document.getElementById('burger');
+
+      nav.classList.toggle('active');
+
+      // Toggle icon
+      if (nav.classList.contains('active')) {
+        burger.textContent = '✖';
+      } else {
+        burger.textContent = '☰';
+      }
+    }
+  </script>
 
 
 
@@ -193,8 +183,9 @@
 
 
 
-      <style>/* HERO SECTION */
-         .hero {
+   <style>
+      /* HERO SECTION */
+      .hero {
          width: 100%;
          height: 800px;
          display: flex;
@@ -203,28 +194,34 @@
          background: #012269;
          position: relative;
          color: white;
-         overflow: hidden; /* Prevents extra spacing */
+         overflow: hidden;
+         /* Prevents extra spacing */
 
-         }
-         .hero-container {
+      }
+
+      .hero-container {
          width: 1280px;
-         max-width: 90%; /* Ensures responsiveness */
+         max-width: 90%;
+         /* Ensures responsiveness */
          display: flex;
          align-items: center;
          justify-content: space-between;
          gap: 40px;
-         }
-         .hero-content {
+      }
+
+      .hero-content {
          max-width: 65%;
          z-index: 2;
          margin-top: -300px;
-         }
-         .hero-content h1 {
+      }
+
+      .hero-content h1 {
          font-size: 70px;
          margin-bottom: 20px;
          font-weight: normal;
-         }
-         .hero-content .btn {
+      }
+
+      .hero-content .btn {
          display: inline-block;
          padding: 12px 24px;
          background: #00E5E0;
@@ -233,273 +230,339 @@
          font-size: 1.2rem;
          border-radius: 302px;
          transition: 0.3s;
-         }
-         .hero-content .btn:hover {
-         box-shadow: 0 0 0 2px #012269; /* Outside stroke */
-         transform: scale(1.05); /* Slight zoom */
-         }
-         .hero-image {
+      }
+
+      .hero-content .btn:hover {
+         box-shadow: 0 0 0 2px #012269;
+         /* Outside stroke */
+         transform: scale(1.05);
+         /* Slight zoom */
+      }
+
+      .hero-image {
          position: absolute;
          top: 0;
          right: 0;
-         width: 90vw; /* Uses viewport width for better responsiveness */
+         width: 90vw;
+         /* Uses viewport width for better responsiveness */
          height: 100%;
          display: flex;
          align-items: flex-start;
          justify-content: flex-end;
          overflow: hidden;
-         }
-         .hero-image img {
+      }
+
+      .hero-image img {
          width: 1000px;
          height: 100%;
-         object-fit: cover; /* Ensures it fills space without distortion */
+         object-fit: cover;
+         /* Ensures it fills space without distortion */
          mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
          -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
          opacity: 0.3;
-         }
-         /* Mobile Optimization */
+      }
+
+      /* Mobile Optimization */
 
 
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .hero-content {
-    max-width: 55%;
-    margin-top: -200px;
-  }
-
-
-  .hero-content h1 {
-    font-size: 48px;
-  }
-}
-
-         @media screen and (max-width: 768px) {
-         .hero {
-         flex-direction: column;
-         height: 60vh; /* Ensure full viewport height */
-         padding: 0; /* Remove extra padding */
-         text-align: center;
-         }
-         .hero-content h1 {
-         font-size: 40px;
-         margin-bottom: 20px;
-         font-weight: normal;
-         }
-         .hero-container {
-         flex-direction: column;
-         text-align: center;
-         height: 100%; /* Ensure container takes full height */
-         }
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
          .hero-content {
-         max-width: 100%;
-         margin-top: 40px;
+            max-width: 55%;
+            margin-top: -200px;
          }
-         .hero-image {
-         position: relative;
-         width: 100vw; /* Full viewport width */
-         height: 100vh; /* Full viewport height */
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         overflow: hidden;
-         margin-top: -502px;
-         }
-         .hero-image img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover; /* Ensure image covers the full container */
-         }
-         .hero-curve {
-         bottom: -10px;
-         }
-         }
-      </style>
-      <!-- HERO SECTION -->
-     <section id="home" style="padding-top: 80px; margin-top: -80px;"> </section>
 
-      <section class="hero">
-         <div class="hero-container">
-            <div class="hero-content">
-               <h1>Dedicated Support Services for Your Business Needs at <span style="color:#00E5E0;">Your Call</span></h1>
-               <a  href="#contact" class="btn">Book an Appointment</a>
-            </div>
-            <div class="hero-image">
-               <img src="https://liammiggy.github.io/yobirdie/heroimage.png" alt="YoBirdie">
-            </div>
+
+         .hero-content h1 {
+            font-size: 48px;
+         }
+      }
+
+      @media screen and (max-width: 768px) {
+         .hero {
+            flex-direction: column;
+            height: 60vh;
+            /* Ensure full viewport height */
+            padding: 0;
+            /* Remove extra padding */
+            text-align: center;
+         }
+
+         .hero-content h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: normal;
+         }
+
+         .hero-container {
+            flex-direction: column;
+            text-align: center;
+            height: 100%;
+            /* Ensure container takes full height */
+         }
+
+         .hero-content {
+            max-width: 100%;
+            margin-top: 40px;
+         }
+
+         .hero-image {
+            position: relative;
+            width: 100vw;
+            /* Full viewport width */
+            height: 100vh;
+            /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-top: -502px;
+         }
+
+         .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensure image covers the full container */
+         }
+
+         .hero-curve {
+            bottom: -10px;
+         }
+      }
+   </style>
+   <!-- HERO SECTION -->
+   <section id="home" style="padding-top: 80px; margin-top: -80px;"> </section>
+
+   <section class="animated-bird">
+      <div class="animated-bird-image">
+         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/Bird-animation-01.gif">
+      </div>
+   </section>
+
+   <style>
+      .animated-bird {
+         position: relative;
+         max-width: 1200px;
+         margin: auto;
+      }
+
+      .animated-bird-image {
+         position: absolute;
+         margin-top: 34%;
+         margin-left: 12%;
+         z-index: 9999;
+      }
+
+      .animated-bird img {
+         width: 94%;
+      }
+
+      @media screen and (max-width: 1024px) {
+         .animated-bird {
+            display: none;
+         }
+      }
+   </style>
+
+
+
+   <section class="hero">
+      <div class="hero-container">
+         <div class="hero-content">
+            <h1>Dedicated Support Services for Your Business Needs at <span style="color:#00E5E0;">Your Call</span></h1>
+            <a href="#contact" class="btn">Book an Appointment</a>
          </div>
-         <div class="hero-line">
-            <!-- /<img class="bird" src="https://liammiggy.github.io/yobirdie/Bird-animation-01.gif" alt="Hero Bird Line"> -->
-            <img src="https://liammiggy.github.io/yobirdie/colorlines.png" alt="dedicated Support">
+         <div class="hero-image">
+            <img src="https://liammiggy.github.io/yobirdie/heroimage.png" alt="YoBirdie">
          </div>
-      </section>
-       
-      <style>
-         .hero-line {
-         width: 100vw; /* Full width */
+      </div>
+      <div class="hero-line">
+         <!-- <img class="bird" src="./birdline.png" alt="Hero Bird Line"> -->
+         <img src="https://liammiggy.github.io/yobirdie/colorlines.png" alt="dedicated Support">
+      </div>
+   </section>
+
+   <style>
+      .hero-line {
+         width: 100vw;
+         /* Full width */
          text-align: center;
          position: absolute;
-         bottom: -95px; /* Adjust as needed */
+         bottom: -95px;
+         /* Adjust as needed */
          left: 0;
-         z-index: 99999999 !important; /* Ensure highest priority */
-         pointer-events: none; /* Prevent interaction issues */
-         }
-         .hero-line img {
-         width: 100%; /* Ensures responsiveness */
+         /* z-index: 99999999 !important; */
+         /* Ensure highest priority */
+         pointer-events: none;
+         /* Prevent interaction issues */
+      }
+
+      .hero-line img {
+         width: 100%;
+         /* Ensures responsiveness */
          height: auto;
-         }
-         /* Mobile Adjustments */
+      }
 
-        
-         @media screen and (max-width: 768px) 
-         {
+      /* Mobile Adjustments */
+
+
+      @media screen and (max-width: 768px) {
          .hero-line {
-         bottom: -30px; /* Adjust positioning on smaller screens */
+            bottom: -30px;
+            /* Adjust positioning on smaller screens */
          }
+
          .hero-line img {
-         max-width: 100%;
+            max-width: 100%;
          }
-         }
-
-
-      </style>
-
+      }
+   </style>
 
 
 
 
+  
 
 
+   <style>
+      .bird {
+         position: absolute;
+         /* Stays inside .hero-line */
+         top: 101%;
+         /* Keeps it in place */
+         left: 30%;
+         /* Adjust as needed */
+         transform: translate(-50%, -50%);
+         /* Fixes center positioning */
+         width: 200px;
+         /* Set a fixed width to prevent unwanted scaling */
+         max-width: 20%;
+         /* Responsive size */
+         z-index: 99999999 !important;
+         /* Ensure highest priority */
+         pointer-events: none;
+         /* Avoids interaction issues */
+      }
 
-
-      <style>
+      @media screen and (max-width: 768px) {
          .bird {
-         position: absolute; /* Stays inside .hero-line */
-         top: 101%; /* Keeps it in place */
-         left:30%; /* Adjust as needed */
-         transform: translate(-50%, -50%); /* Fixes center positioning */
-         width: 200px; /* Set a fixed width to prevent unwanted scaling */
-         max-width: 20%; /* Responsive size */
-         z-index: 99999999 !important; /* Ensure highest priority */
-         pointer-events: none; /* Avoids interaction issues */
+            display: none;
          }
-         @media screen and (max-width: 768px) {
-         .bird  {
-         display: none;
-         }
-         }
-      </style>
+      }
+   </style>
 
-           <section class="about-section" id="about" >  
-   <div class="about-image"></div>
-   <div class="about-section-wrapper">
-      <div class="about-content">
-         <h1>Make Your Life Easier</h1>
-         <p>When you need that day off, know that someone has your back.</p>
+   <section class="about-section" id="about">
+      <div class="about-image"></div>
+      <div class="about-section-wrapper">
+         <div class="about-content">
+            <h1>Make Your Life Easier</h1>
+            <p>When you need that day off, know that someone has your back.</p>
+         </div>
       </div>
-   </div>
-</section>
+   </section>
 
-<style>
-   .about-section {
-      position: relative;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      min-height: 500px;
-   }
-
-   .about-image {
-      position: absolute;
-      left: 0;
-      top:-200px;
-      bottom: 0;
-      width: 50%;
-      background: url('https://liammiggy.github.io/yobirdie/horse_web.webp') no-repeat center center;
-      background-size: cover;
-      z-index: 99999 !important;
-    
-      
-
-   }
-
-   .about-section-wrapper {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding-left: 30%;
-   }
-
-   .about-content {
-     
-      flex: 1;
-      padding: 40px;
-      text-align: right;
-       
-   }
-
-   .about-content h1 {
-      font-size: 60px;
-      margin-bottom: 15px;
-      color: #012269;
-        
-   }
-
-   .about-content p {
-      font-size: 30px;
-      line-height: 1.5;
-      color: #8B8B8B;
-   }
-
-
-
-  /* Mobile Responsive */
-   @media (max-width: 768px) {
+   <style>
       .about-section {
+         position: relative;
+         width: 100%;
          display: flex;
-         flex-direction: column;
-         background: url('https://liammiggy.github.io/yobirdie/horse.webp') no-repeat center center;
-         background-size: cover;
+         flex-direction: row;
+         min-height: 500px;
       }
 
       .about-image {
-         display: none;
+         position: absolute;
+         left: 0;
+         top: -200px;
+         bottom: 0;
+         width: 50%;
+         background: url('https://liammiggy.github.io/yobirdie/horse_web.webp') no-repeat center center;
+         background-size: cover;
+         /* z-index: 99999 !important; */
+
+
+
       }
 
       .about-section-wrapper {
-         padding: 0 20px;
-         max-width: 100%;
-      
-         min-height: 400px;
-         justify-content: center;
+         position: relative;
+         z-index: 2;
+         display: flex;
+         justify-content: flex-end;
          align-items: center;
+         width: 100%;
+         max-width: 1280px;
+         margin: 0 auto;
+         padding-left: 30%;
       }
 
       .about-content {
-       
-         text-align: center;
-         color:#012269;
-         padding: 20px;
+
+         flex: 1;
+         padding: 40px;
+         text-align: right;
+
       }
 
       .about-content h1 {
-         font-size: 40px;
+         font-size: 60px;
+         margin-bottom: 15px;
          color: #012269;
+
       }
 
       .about-content p {
-         font-size: 25px;
+         font-size: 30px;
+         line-height: 1.5;
          color: #8B8B8B;
       }
-   }
-</style>
 
-     
-      <!-- <section class="about-section">
+
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+         .about-section {
+            display: flex;
+            flex-direction: column;
+            background: url('https://liammiggy.github.io/yobirdie/horse.webp') no-repeat center center;
+            background-size: cover;
+         }
+
+         .about-image {
+            display: none;
+         }
+
+         .about-section-wrapper {
+            padding: 0 20px;
+            max-width: 100%;
+
+            min-height: 400px;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .about-content {
+
+            text-align: center;
+            color: #012269;
+            padding: 20px;
+         }
+
+         .about-content h1 {
+            font-size: 40px;
+            color: #012269;
+         }
+
+         .about-content p {
+            font-size: 25px;
+            color: #8B8B8B;
+         }
+      }
+   </style>
+
+
+   <!-- <section class="about-section">
          <div class="about-image"></div>
          <div class="about-content">
             <h1>Make Your Life Easier</h1>
@@ -570,54 +633,63 @@
          }
          }
       </style> -->
-      <style>
-         /* Full-width background (Blue) */
-         .tabs-container {
+   <style>
+      /* Full-width background (Blue) */
+      .tabs-container {
          width: 100%;
-         background: linear-gradient(180deg, rgba(0,121,192,1) -30%, rgba(0,97,168,1) 10%, rgba(1,36,107,1) 56%, rgba(1,34,105,1) 100%);
+         background: linear-gradient(180deg, rgba(0, 121, 192, 1) -30%, rgba(0, 97, 168, 1) 10%, rgba(1, 36, 107, 1) 56%, rgba(1, 34, 105, 1) 100%);
          display: flex;
          flex-direction: column;
          align-items: center;
          padding: 40px 0;
-         position: relative; /* Needed for absolute positioning of the curve */
-         }
-         .tabs-curve {
+         position: relative;
+         z-index: 999999;
+         /* Needed for absolute positioning of the curve */
+      }
+
+      .tabs-curve {
          position: absolute;
-         bottom: -20px; 
+         bottom: -20px;
          left: 0;
          width: 100%;
          overflow: hidden;
          line-height: 0;
-         }
-         /* 1280px Content Wrapper */
-         .tabs {
+      }
+
+      /* 1280px Content Wrapper */
+      .tabs {
          width: 1000px;
          display: flex;
          justify-content: space-around;
          align-items: center;
          gap: 5px;
-         }
-         /* Tab Icons */
-         .tab {
+      }
+
+      /* Tab Icons */
+      .tab {
          position: relative;
          padding: 10px;
          text-align: center;
          cursor: pointer;
          transition: 0.3s ease-in-out;
-         }
-         .tab img {
+      }
+
+      .tab img {
          width: 50px;
          height: 50px;
          filter: brightness(0) invert(1);
          transition: 0.3s;
-         }
-         .tab.active img {
-    filter: brightness(1) invert(0); /* Makes it fully visible when active */
-    transform: scale(1.3); /* Slightly enlarges the icon */
-}
+      }
 
-         /* Highlight Bar */
-         .tab.active::before {
+      .tab.active img {
+         filter: brightness(1) invert(0);
+         /* Makes it fully visible when active */
+         transform: scale(1.3);
+         /* Slightly enlarges the icon */
+      }
+
+      /* Highlight Bar */
+      .tab.active::before {
          content: "";
          position: absolute;
          top: -40px;
@@ -626,51 +698,59 @@
          width: 160px;
          height: 20px;
          background-color: #90D812;
-         border-radius:2px;
-         }
-         /* Centered Title */
-         .tab-title {
+         border-radius: 2px;
+      }
+
+      /* Centered Title */
+      .tab-title {
          text-align: center;
          font-size: 40px;
          color: #fff;
          margin: 20px 0;
-         }
-         /* Circle Container (Inside Blue) */
-         .content-container {
+      }
+
+      /* Circle Container (Inside Blue) */
+      .content-container {
          display: flex;
          justify-content: center;
          align-items: center;
          flex-direction: column;
          margin-top: 10px;
-         }
-         .tab-content {
-         text-align: center; /* Center text horizontally */
+      }
+
+      .tab-content {
+         text-align: center;
+         /* Center text horizontally */
          display: flex;
          flex-direction: column;
-         align-items: center; /* Center items horizontally */
-         justify-content: center; /* Center items vertically */
+         align-items: center;
+         /* Center items horizontally */
+         justify-content: center;
+         /* Center items vertically */
          /*margin-top: 50px; 
          margin-bottom: 50px; */
          padding: 10px;
-         }
-         .tab-description {
+      }
+
+      .tab-description {
          font-size: 20px;
-         max-width: 900px; 
+         max-width: 900px;
          line-height: 1.5;
          color: white;
-          min-height: 90px; 
-          text-align: center;
-          overflow: hidden; 
-      
-         }
-         /* Circle with icon inside */
-         .circle {
-          /* background: url('https://liammiggy.github.io/yobirdie/birdienest.webp') no-repeat center/cover; 
+         min-height: 90px;
+         text-align: center;
+         overflow: hidden;
+
+      }
+
+      /* Circle with icon inside */
+      .circle {
+         /* background: url('https://liammiggy.github.io/yobirdie/birdienest.webp') no-repeat center/cover; 
          background-size: contain;*/
          width: 850px;
          height: 850px;
-/*         background-color: #90D812;*/
-/*         border-radius: 50%;*/
+         /*         background-color: #90D812;*/
+         /*         border-radius: 50%;*/
          display: flex;
          justify-content: center;
          align-items: center;
@@ -679,43 +759,51 @@
          color: #fff;
          padding: 60px;
          flex-direction: column;
-/*         transition: 0.5s ease-in-out;*/
-         }
-         .circle img {
+         /*         transition: 0.5s ease-in-out;*/
+      }
+
+      .circle img {
          width: 90px;
          height: 90px;
          margin-bottom: 10px;
          filter: brightness(0) invert(1);
-         }
-         .circle-content {
+      }
+
+      .circle-content {
          display: flex;
          flex-direction: column;
          align-items: center;
          justify-content: center;
          text-align: center;
-         transform: translateY(-50px); /* Move content up */
-         }
-         #circle-content {
+         transform: translateY(-50px);
+         /* Move content up */
+      }
+
+      #circle-content {
          display: flex;
          flex-direction: column;
          align-items: center;
          justify-content: center;
          text-align: center;
          position: relative;
-         }
-         #circle-icon,
-         #circle-text {
-         transform: translateY(-109px); /* Move both icon and text up */
+      }
+
+      #circle-icon,
+      #circle-text {
+         transform: translateY(-109px);
+         /* Move both icon and text up */
          font-size: 25px;
-         }
-         #circle-text {
+      }
+
+      #circle-text {
          padding: 20px;
          padding-left: 90px;
          padding-right: 90px;
 
-         }
-         /* Arrows */
-         .arrow {
+      }
+
+      /* Arrows */
+      .arrow {
          font-size: 20px;
          color: white;
          cursor: pointer;
@@ -725,302 +813,329 @@
          padding: 10px 10px;
          /*         border-radius: 50%;*/
          user-select: none;
-         z-index: 9999999999999!important;
-         }
-         .left-arrow {
+         z-index: 9999999999999 !important;
+      }
+
+      .left-arrow {
          left: 300px;
-         }
-         .right-arrow {
+      }
+
+      .right-arrow {
          right: 300px;
-         }
-         .arrow:hover {
+      }
+
+      .arrow:hover {
          background: rgba(0, 0, 0, 0.6);
-         }
+      }
 
 
 
       @media (max-width: 1504px) {
-    .arrow {
+         .arrow {
 
-       display: block;
-        position: absolute;
-        
-        transform: translateX(100%);
-         transform: translateY(-400px);        
-    }
-    .right-arrow {
-    right: 300px;
-}
+            display: block;
+            position: absolute;
 
-.lefet-arrow {
-    right: 300px;
-}
-}
-
-
-         /* Mobile Styles */
-
-         @media (max-width: 768px) {
-         .tabs {
-         width: 100%;
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-         gap: 30px;
+            transform: translateX(100%);
+            transform: translateY(-450px);
          }
+
+         .right-arrow {
+            right: 300px;
+         }
+
+         .lefet-arrow {
+            right: 300px;
+         }
+      }
+
+
+      /* Mobile Styles */
+
+      @media (max-width: 768px) {
+         .tabs {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+         }
+
          .tab {
-         flex: 0 0 auto;
-         width: 50px;
+            flex: 0 0 auto;
+            width: 50px;
          }
 
          .tab img {
-         width: 40px;
-         height: 40px;
+            width: 40px;
+            height: 40px;
          }
+
          .circle {
-         width: 385px;
-         height: 385px;
-         font-size: 14px;
+            width: 385px;
+            height: 385px;
+            font-size: 14px;
          }
+
          .circle img {
-         width: 60px;
-         height: 60px;
+            width: 60px;
+            height: 60px;
          }
+
          .tab.active::before {
-         width: 80px;
-         height: 15px;
+            width: 80px;
+            height: 15px;
          }
 
          .tab-title {
-         text-align: center;
-         font-size: 30px;
-         color: #fff;
-         margin: 20px 0;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            margin: 20px 0;
          }
-         .tab-description {
-         font-size: 18px;
-        
-      
-         }
-         .arrow {
-         display: none;
-         }
-         .content-container {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         margin-top: 60px;
-         }
-         #circle-text {
-         font-size: 18px;
 
-         padding: 20px;
-         padding-left: 2px;
-         padding-right: 2px;
-        
+         .tab-description {
+            font-size: 18px;
+
+
          }
-         @media (max-width: 768px) { /* Mobile view */
-         #circle-icon,
+
+         .arrow {
+            display: none;
+         }
+
+         .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px;
+         }
+
          #circle-text {
-         transform: translateY(-8px); /* Less movement on smaller screens */
+            font-size: 18px;
+
+            padding: 20px;
+            padding-left: 2px;
+            padding-right: 2px;
+
          }
+
+         @media (max-width: 768px) {
+
+            /* Mobile view */
+            #circle-icon,
+            #circle-text {
+               transform: translateY(-8px);
+               /* Less movement on smaller screens */
+            }
          }
-      </style>
-      </head>
-      <!-- Tab Icons Section -->
-       <section id="services" style=" padding-top: 68px; margin-top:-68px"> </section>
-      <div class="tabs-container">
-         <div class="tabs">
-            <div class="tab active" onclick="changeTab(0)">
-               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab 1">
-            </div>
-            <div class="tab" onclick="changeTab(1)">
-               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp" alt="Tab 2">
-            </div>
-            <div class="tab" onclick="changeTab(2)">
-               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp" alt="Tab 3">
-            </div>
-            <div class="tab" onclick="changeTab(3)">
-               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp" alt="Tab 4">
-            </div>
-            <div class="tab" onclick="changeTab(4)">
-               <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp" alt="Tab 5">
-            </div>
-         </div>
-         <!-- Dynamic Title & Description -->
-         <div class="tab-content">
-            <div class="tab-title" id="tab-title">Our High-Value Services</div>
-            <div class="tab-description" id="tab-description">Our expert team is always ready to assist with your unique needs</div>
-         </div>
-         <!-- Circle with Icon Inside -->
-         <div class="content-container">
-            <div class="arrow left-arrow" onclick="changeTab(currentIndex - 1)">&#10094;</div>
-            <!-- Left Arrow -->
-            <div class="circle" id="circle-content">
-               <img id="circle-icon" src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab Icon">
-               <div id="circle-text">Social Media Management, Content Creation, Graphic Design, Web Design and Development, and more in the nest!</div>
-            </div>
-            <div class="arrow right-arrow" onclick="changeTab(currentIndex + 1)">&#10095;</div>
-            <!-- Right Arrow -->
-         </div>
-         <!-- 
+   </style>
+</head>
+<!-- Tab Icons Section -->
+<section id="services" style=" padding-top: 68px; margin-top:-68px"> </section>
+<div class="tabs-container">
+   <div class="tabs">
+      <div class="tab active" onclick="changeTab(0)">
+         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp" alt="Tab 1">
+      </div>
+      <div class="tab" onclick="changeTab(1)">
+         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp" alt="Tab 2">
+      </div>
+      <div class="tab" onclick="changeTab(2)">
+         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp" alt="Tab 3">
+      </div>
+      <div class="tab" onclick="changeTab(3)">
+         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp" alt="Tab 4">
+      </div>
+      <div class="tab" onclick="changeTab(4)">
+         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp" alt="Tab 5">
+      </div>
+   </div>
+   <!-- Dynamic Title & Description -->
+   <div class="tab-content">
+      <div class="tab-title" id="tab-title">Our High-Value Services</div>
+      <div class="tab-description" id="tab-description">Our expert team is always ready to assist with your unique needs
+      </div>
+   </div>
+   <!-- Circle with Icon Inside -->
+   <div class="content-container">
+      <div class="arrow left-arrow" onclick="changeTab(currentIndex - 1)">&#10094;</div>
+      <!-- Left Arrow -->
+      <div class="circle" id="circle-content">
+         <img id="circle-icon" src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp"
+            alt="Tab Icon">
+         <div id="circle-text">Social Media Management, Content Creation, Graphic Design, Web Design and Development,
+            and more in the nest!</div>
+      </div>
+      <div class="arrow right-arrow" onclick="changeTab(currentIndex + 1)">&#10095;</div>
+      <!-- Right Arrow -->
+   </div>
+   <!-- 
             <div class="tabs-curve">
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2023.77 954.65" style="width: 100%; height: auto;">
                        <path fill="white" d="M2023.77,954.65V0c-381.13,365.17-788.43,432.88-1174.45,380.52C545.3,339.29,254.47,223.58,0,120.07v834.57h2023.77Z"/>
                    </svg>
                </div> -->
-      </div>
-      <script>
-         // Tab Data
-         const tabContents = [
-             { 
-                 title: "Our High-Value Services", 
-                 description: "Our expert team is always ready to assist with your unique needs",
-                 circleText: " Social Media Management, Content Creation, Graphic Design, Web Design and Development, and more in the nest!",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp"
-             },
-             { 
-                 title: "Social Media Management", 
-                 description: "We help businesses build and maintain a strong online presence accross all major social media platform",
-                 circleText: "Social Media Strategy & Planning, Account Setup & Optimization, Content Calendar Creation, Post Creation & Scheduling",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp"
-             },
-             { 
-                 title: "Graphic Design", 
-                 description: "Our Services include branding, social media graphics, marketing materials, infographics, and more design to elevate your business and communicate your message effectively",
-                 circleText: "Logo & Branding Design, Social Media Graphics & Templates, Marketing Materials (Flyers, Brochures, Poster) Business cards & Stationery Design",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp"
-             },
-             { 
-                 title: "Content Creation", 
-                 description: "Engaging content is key to attracting and retaining customers. We create high-quality blog articles, website copy, social media posts, and more, all tailored to your brand's voice and optimized for search engines and audience engagement",
-                 circleText: "Blog Writing & Article Creation, Website Copywriting, Social Media Captions & Posts, Email Newsletter Copywritting",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp"
-             },
-             { 
-                 title: "Web Design and Development", 
-                 description: "A well-designed website is your digital storefront. We create modern responsive, and user-friendly websites taiolored to your business needs.",
-                 circleText: "Custom Website Design, Website Redesign & Optimization, E-Commerce Website Development, Landing Page Design",
-                 icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp"
-             }
-         ];
-         
-         let currentIndex = 0;
-         
-         function changeTab(index) {
-             if (index < 0) index = tabContents.length - 1; // Loop to last tab
-             if (index >= tabContents.length) index = 0; // Loop to first tab
-         
-             currentIndex = index;
-         
-             // Update Active Tab
-             document.querySelectorAll(".tab").forEach((tab, i) => {
-                 tab.classList.toggle("active", i === index);
-             });
-         
-             // Update Title & Description
-             document.getElementById("tab-title").textContent = tabContents[index].title;
-             document.getElementById("tab-description").textContent = tabContents[index].description;
-         
-             // Update Circle Content
-             document.getElementById("circle-text").textContent = tabContents[index].circleText;
-             document.getElementById("circle-icon").src = tabContents[index].icon;
-         
-       
+</div>
+<script>
+   // Tab Data
+   const tabContents = [
+      {
+         title: "Our High-Value Services",
+         description: "Our expert team is always ready to assist with your unique needs",
+         circleText: " Social Media Management, Content Creation, Graphic Design, Web Design and Development, and more in the nest!",
+         icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/ourservices.webp"
+      },
+      {
+         title: "Social Media Management",
+         description: "We help businesses build and maintain a strong online presence accross all major social media platform",
+         circleText: "Social Media Strategy & Planning, Account Setup & Optimization, Content Calendar Creation, Post Creation & Scheduling",
+         icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/socialmedia.webp"
+      },
+      {
+         title: "Graphic Design",
+         description: "Our Services include branding, social media graphics, marketing materials, infographics, and more design to elevate your business and communicate your message effectively",
+         circleText: "Logo & Branding Design, Social Media Graphics & Templates, Marketing Materials (Flyers, Brochures, Poster) Business cards & Stationery Design",
+         icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/graphicdesign.webp"
+      },
+      {
+         title: "Content Creation",
+         description: "Engaging content is key to attracting and retaining customers. We create high-quality blog articles, website copy, social media posts, and more, all tailored to your brand's voice and optimized for search engines and audience engagement",
+         circleText: "Blog Writing & Article Creation, Website Copywriting, Social Media Captions & Posts, Email Newsletter Copywritting",
+         icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/contentCreation.webp"
+      },
+      {
+         title: "Web Design and Development",
+         description: "A well-designed website is your digital storefront. We create modern responsive, and user-friendly websites taiolored to your business needs.",
+         circleText: "Custom Website Design, Website Redesign & Optimization, E-Commerce Website Development, Landing Page Design",
+         icon: "https://yobirdie.com/wp-content/themes/unix-theme/assets/images/webDev.webp"
+      }
+   ];
 
-             const circle = document.querySelector('.circle');
-    
-    // Remove then re-add the class to retrigger animation
-    circle.classList.remove('animate-bg');
-    
-    void circle.offsetWidth; // Force reflow
-    
-    circle.classList.add('animate-bg');
-         }
+   let currentIndex = 0;
 
-         
-      </script>
+   function changeTab(index) {
+      if (index < 0) index = tabContents.length - 1; // Loop to last tab
+      if (index >= tabContents.length) index = 0; // Loop to first tab
+
+      currentIndex = index;
+
+      // Update Active Tab
+      document.querySelectorAll(".tab").forEach((tab, i) => {
+         tab.classList.toggle("active", i === index);
+      });
+
+      // Update Title & Description
+      document.getElementById("tab-title").textContent = tabContents[index].title;
+      document.getElementById("tab-description").textContent = tabContents[index].description;
+
+      // Update Circle Content
+      document.getElementById("circle-text").textContent = tabContents[index].circleText;
+      document.getElementById("circle-icon").src = tabContents[index].icon;
+
+
+
+      const circle = document.querySelector('.circle');
+
+      // Remove then re-add the class to retrigger animation
+      circle.classList.remove('animate-bg');
+
+      void circle.offsetWidth; // Force reflow
+
+      circle.classList.add('animate-bg');
+   }
+
+
+</script>
 
 
 <style>
-   
    @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+      0% {
+         transform: rotate(0deg);
+      }
 
-.circle {
-  /* your existing styles */
- /* position: relative;
+      100% {
+         transform: rotate(360deg);
+      }
+   }
+
+   .circle {
+      /* your existing styles */
+      /* position: relative;
   overflow: hidden;*/
-}
+   }
 
-.circle::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('https://liammiggy.github.io/yobirdie/birdienest.webp') no-repeat center/cover;
-  background-size: contain;
-  z-index: 0;
-  transition: transform 1s linear;
-}
+   .circle::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('https://liammiggy.github.io/yobirdie/birdienest.webp') no-repeat center/cover;
+      background-size: contain;
+      z-index: 0;
+      transition: transform 1s linear;
+   }
 
-.circle.animate-bg::before {
-  animation: spin 1s linear;
-}
+   .circle.animate-bg::before {
+      animation: spin 1s linear;
+   }
 
-.circle > * {
-  position: relative;
-  z-index: 1;
-}
-
+   .circle>* {
+      position: relative;
+      z-index: 1;
+   }
 </style>
-  
 
-      <!-- 
+
+<!-- 
          <div class="hero-line2" style="width: 100%; margin-top: -650px; position: relative; z-index: 3 !important; text-align: center;">
              <img src="./colorlines.png" alt="Hero Decorative Line" style="width: 100%;">
          </div>
           -->
-      <style>
-         .why-us {
-         display: flex;
-         align-items: center;
-         gap: 0;
-         max-width: 1440px;
-         /*    margin: 0 auto;*/
-         padding: 40px;
-         /*    background: #fff;*/
-         /*    border-radius: 10px;*/
-         /*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
-         margin: -150px auto 0;
-         /*      margin: 0 auto 0;*/
-         z-index: 99999999!important;
-         position: relative;
+<style>
+   .why-us {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      max-width: 1440px;
+      /*    margin: 0 auto;*/
+      padding: 40px;
+      /*    background: #fff;*/
+      /*    border-radius: 10px;*/
+      /*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+      margin: -150px auto 0;
+      /*      margin: 0 auto 0;*/
+      z-index: 99999999 !important;
+      position: relative;
 
-         }
-         .why-us img {
-         max-width: 740px;
-         width: 100%;
-         border-radius: 10px;
-         margin-left: -300px; 
-         }
-         .why-us-content {
-         flex: 1;
-         margin: -700px 105px 0;
-         }
-         .why-us h2 {
-         font-size: 70px;
-         margin-bottom: 10px;
-         color: #012269;
-         }
-         .why-us p {
-         font-size: 30px;
-         color: #00E5E0;
-         margin-bottom: 15px;
-         }
-         /*.why-us ul {
+   }
+
+   .why-us img {
+      max-width: 740px;
+      width: 100%;
+      border-radius: 10px;
+      margin-left: -300px;
+   }
+
+   .why-us-content {
+      flex: 1;
+      margin: -700px 105px 0;
+   }
+
+   .why-us h2 {
+      font-size: 70px;
+      margin-bottom: 10px;
+      color: #012269;
+   }
+
+   .why-us p {
+      font-size: 30px;
+      color: #00E5E0;
+      margin-bottom: 15px;
+   }
+
+   /*.why-us ul {
          list-style: disc inside;
          padding: 0;
          }
@@ -1038,138 +1153,154 @@
          font-weight: bold;
          margin-right: 15px;
          }*/
-.why-us ul {
-    list-style: none; /* Removes default bullets */
-    padding: 0;
-    margin-top: 30px;
-}
+   .why-us ul {
+      list-style: none;
+      /* Removes default bullets */
+      padding: 0;
+      margin-top: 30px;
+   }
 
-.why-us ul li {
-    font-size: 25px;
-    color: #8B8B8B;
-    position: relative;
-    padding-left: 30px; /* Space for custom bullet */
-    line-height: 1.4; /* Adjust spacing */
-}
+   .why-us ul li {
+      font-size: 25px;
+      color: #8B8B8B;
+      position: relative;
+      padding-left: 30px;
+      /* Space for custom bullet */
+      line-height: 1.4;
+      /* Adjust spacing */
+   }
 
-.why-us ul li::before {
-    content: "•";
-    color: #00E5E0; /* Bullet color */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0; /* Aligns bullet properly with text */
-    font-size: 26px; /* Bullet size same as text */
-}
-
-
-
-
-@media (min-width: 600px) and (max-width: 1024px) {
-    .why-us {
-        flex-direction: column-reverse;
-        text-align: center;
-        margin-top: -200px;
-    }
-
-    .why-us img {
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .why-us-content {
-        flex: 1;
-        margin: 0;
-    }
-
-    .why-us ul li::before {
-        display: none;
-    }
-}
+   .why-us ul li::before {
+      content: "•";
+      color: #00E5E0;
+      /* Bullet color */
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* Aligns bullet properly with text */
+      font-size: 26px;
+      /* Bullet size same as text */
+   }
 
 
-         @media (max-width: 768px) {
-         .why-us {
+
+
+   @media (min-width: 600px) and (max-width: 1024px) {
+      .why-us {
          flex-direction: column-reverse;
          text-align: center;
          margin-top: -200px;
-         }
-         .why-us img {
+      }
+
+      .why-us img {
+         max-width: 100%;
+         margin-left: 0;
+      }
+
+      .why-us-content {
+         flex: 1;
+         margin: 0;
+      }
+
+      .why-us ul li::before {
+         display: none;
+      }
+   }
+
+
+   @media (max-width: 768px) {
+      .why-us {
+         flex-direction: column-reverse;
+         text-align: center;
+         margin-top: -200px;
+      }
+
+      .why-us img {
          max-width: 100%;
          margin-left: 0;
 
-         }
-         .why-us-content {
+      }
+
+      .why-us-content {
          flex: 1;
          margin: 0;
-         }
-         .why-us ul li::before {
-        display: none;
+      }
 
-    }
-         }
+      .why-us ul li::before {
+         display: none;
 
-@media (max-width: 600px) {
-    .why-us {
-        flex-direction: column-reverse;
-        text-align: center;
-        margin-top: -200px;
-        margin-bottom: 200px;
-    }
+      }
+   }
 
-    .why-us img {
-        display: none; /* Hide image on small mobiles */
-    }
+   @media (max-width: 600px) {
+      .why-us {
+         flex-direction: column-reverse;
+         text-align: center;
+         margin-top: -200px;
+         margin-bottom: 200px;
+      }
 
-    .why-us-content {
-        flex: 1;
-        margin: 0;
-    }
+      .why-us img {
+         display: none;
+         /* Hide image on small mobiles */
+      }
 
-    .why-us ul li::before {
-        display: none;
-    }
-}
+      .why-us-content {
+         flex: 1;
+         margin: 0;
+      }
 
-      </style>
+      .why-us ul li::before {
+         display: none;
+      }
+   }
+</style>
+<style>
+   .curve-bg {
+      background: url('https://liammiggy.github.io/yobirdie/nestcurve.png') no-repeat center top;
+      background-size: cover;
+      height: 727px;
+      width: 100%;
+      position: relative;
+      margin-top: -710px;
+      z-index: 999999 !important;
+   }
 
-      <style>
-         .curve-bg {
-         background: url('https://liammiggy.github.io/yobirdie/nestcurve.png') no-repeat center top;
-         background-size: cover;
-         height: 727px;
-         width: 100%;
-         position: relative;
-         margin-top: -710px;
-         z-index: 999999!important;
-         }
-         /* 📱 Mobile Optimization */
-         @media (max-width: 768px) { 
-         .curve-bg {
-         background-position: center center; /* Fully centers the image */
-         background-size: contain; /* Prevents cropping */
-         height: 600px; /* Adjust height for mobile */
-         margin-top: -350px; /* Reduce negative margin */
-         }
-         }
-      </style>
-      
-      <section class="curve-bg"></section>      
-      <section class="why-us">
-         <img src="https://liammiggy.github.io/yobirdie/birdclip.png" alt="Why Us">
-         <div class="why-us-content">
-             <section id="why_us" style="padding-top: 60px; margin-top: -80px;"><p></p> </section>
-            <h2>Why CallBirdie?</h2>
-            <p>Think of us as the team that's here to take your business to the next level.</p>
-            <ul>
-               <li>CallBirdie streamlines the process, freeing you to focus on growth.</li>
-               <br>
-               <li>We'll handle the day-to-day tasks and deliver measurable results, so you can see your dream become a reality.</li>
-            </ul>
-         </div>
+   /* 📱 Mobile Optimization */
+   @media (max-width: 768px) {
+      .curve-bg {
+         background-position: center center;
+         /* Fully centers the image */
+         background-size: contain;
+         /* Prevents cropping */
+         height: 600px;
+         /* Adjust height for mobile */
+         margin-top: -350px;
+         /* Reduce negative margin */
+      }
+   }
+</style>
+
+<section class="curve-bg"></section>
+<section class="why-us">
+   <img src="https://liammiggy.github.io/yobirdie/birdclip.png" alt="Why Us">
+   <div class="why-us-content">
+      <section id="why_us" style="padding-top: 60px; margin-top: -80px;">
+         <p></p>
       </section>
-      <style>
-         /*.tree-services {
+      <h2>Why CallBirdie?</h2>
+      <p>Think of us as the team that's here to take your business to the next level.</p>
+      <ul>
+         <li>CallBirdie streamlines the process, freeing you to focus on growth.</li>
+         <br>
+         <li>We'll handle the day-to-day tasks and deliver measurable results, so you can see your dream become a
+            reality.</li>
+      </ul>
+   </div>
+</section>
+<style>
+   /*.tree-services {
          padding: 0;
          background: linear-gradient(180deg, rgba(0,121,192,1) -30%, rgba(0,97,168,1) 10%, rgba(1,36,107,1) 56%, rgba(1,34,105,1) 100%);
          display: flex;
@@ -1178,375 +1309,529 @@
          min-height: 100vh;
          overflow: hidden;
          }*/
-         .tree-services {
-         padding: 0;
-         background: url('https://liammiggy.github.io/yobirdie/servicesbg.webp') no-repeat center center;
-         background-size: cover;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         min-height: 220vh;
-         overflow: hidden;
-         margin-top: -450px;
-         }
-         section.tree-container {
-         position: relative;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
+   .tree-services {
+      padding: 0;
+      background: url('https://liammiggy.github.io/yobirdie/servicesbg.webp') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin-top: -150px;
+   }
+
+   section.tree-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 600px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+   }
+
+   .yobirdie-tree-container {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .tree {
+      display: none;
+      width: 100%;
+      max-width: 1440px;
+      height: auto;
+   }
+
+   .info-box {
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      position: static;
+      margin: 10px 0;
+      border-radius: 10px;
+      width: 100%;
+   }
+
+   .advisor {
+      background-color: #90D812;
+      left: -30px;
+      top: 500px;
+   }
+
+   .resources {
+      background-color: #F4A623;
+      right: -40px;
+      top: 590px;
+   }
+
+   .text-box {
+      position: static;
+      align-items: center;
+      width: 60%;
+      margin: 10px 0;
+      color:white;
+      font-size: 18px;
+      /* position: absolute;
+      width: 200px;
+      font-size: 18px;
+      color: white; */
+   }
+
+   .text-left {
+      left: -300px;
+      top: 670px;
+      text-align: center;
+   }
+
+   .text-right {
+      right: -300px;
+      top: 760px;
+      text-align: center;
+   }
+
+   .line-left {
+      display: none;
+      position: absolute;
+      left: -180px;
+      top: 610px;
+      width: 110px;
+      height: 40px;
+      background-image: url('https://liammiggy.github.io/yobirdie/leftline.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+
+   .line-right {
+      display: none;
+      position: absolute;
+      right: -180px;
+      top: 700px;
+      width: 110px;
+      height: 40px;
+      background-image: url('https://liammiggy.github.io/yobirdie/leftline.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: scaleX(-1);
+   }
+
+   /* Intro Section Styles */
+   .intro-section {
+      padding: 50px 0;
+      text-align: center;
+      width:  100%;
+   }
+
+   .intro-section .tree {
+      width: 841px;
+   }
+
+   
+
+   .intro-text h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: white;
+   }
+
+   .intro-text p {
+      font-size: 18px;
+      color: white;
+      line-height: 1.5;
+   }
+
+   /* Main Section Styling */
+   .tree-services {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+      flex-direction: column;
+      position: relative;
+      z-index: 999999999;
+      /* Keeps the section above the top image */
+   }
+
+   @media screen and (min-width: 601px) {
+      .tree-services {
+         margin-top: -280px;
+      }
+
+      .tree {
+         display: block;
          width: 90%;
-         max-width: 600px;
-         margin-top: 50px;
-         margin-bottom: 50px;
-         }
-         .tree {
-         width: 100%;
-         max-width: 1440px;
-         height: auto;
-         }
-         .info-box {
+      }
+
+      .yobirdie-tree-container {
+         height: 830px;
+         width: 541px;
+      }
+
+      .info-box {
          position: absolute;
-         width: 220px;
-         height: 220px;
-         border-radius: 150px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         color: white;
-         font-size: 30px;
-         font-weight: bold;
-         text-align: center;
-         }
-         .advisor {
-         background-color: #90D812;
-         left: -30px;
-         top: 500px;
-         }
-         .resources {
-         background-color: #F4A623;
-         right: -40px;
-         top: 590px;
-         }
-         .text-box {
+         width: 180px;
+         height: 180px;
+         font-size: 22px;
+         border-radius: 50%;
+         padding: 5px;
+      }
+
+      .advisor {
+         left: -5px;
+         top: 65px;
+      }
+
+      .resources {
+         right: -10px;
+         top: 115px;
+      }
+
+      .text-box {
          position: absolute;
          width: 200px;
          font-size: 18px;
          color: white;
-         }
-         .text-left {
-         left: -300px;
-         top: 670px;
-         text-align: left;
-         }
-         .text-right {
-         right: -300px;
-         top: 760px;
-         text-align: left;
-         }
-         .line-left {
-         position: absolute;
-         left: -180px;
-         top: 610px;
-         width: 110px;
-         height: 40px;
-         background-image: url('https://liammiggy.github.io/yobirdie/leftline.png');
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-position: center;
-         }
-         .line-right {
-         position: absolute;
-         right: -180px;
-         top: 700px;
-         width: 110px;
-         height: 40px;
-         background-image: url('https://liammiggy.github.io/yobirdie/leftline.png');
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-position: center;
-         transform: scaleX(-1);
-         }
-         /* Intro Section Styles */
-         .intro-section {
-         padding: 50px 0;       
-         text-align: center;
-         width: 1280px;
-         }
-         .intro-text h2 {
-         font-size: 60px;
-         margin-bottom: 15px;
-         color:white;
-         }
-         .intro-text p {
-         font-size: 25px;
-         color:white;
-         line-height: 1.5;
-         }
-         /* Main Section Styling */
-         .tree-services {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         padding: 50px 0;
-         flex-direction: column;
-         position: relative;
-         z-index: 999999999; /* Keeps the section above the top image */
-         }
-         /* RESPONSIVE DESIGN */
-         @media (max-width: 768px) {
-         section.tree-container {
-         align-items: center;
-         padding-top: 0px;
-   margin-top: -600px;
-   padding-top: 490px;
-         }
-         .tree {
-         /*max-width: 250px;
-         display: block;
-         */
-         display: none;
-         }
-         .tree-services
-         {
-         margin-top: -120px;
-         margin-bottom: 50px;
-         }
-         .info-box {
-         position: static;
-         margin: 10px 0;
-         border-radius: 10px;
-         width: 100%;
-         }
-         .text-box {
-         position: static;
-         text-align: center;
-         width: 60%;
-         margin: 10px 0;
-         }
-         .line {
-         display: none;
-         }
-         .intro-section {
-         padding: 50px 0;       
-         text-align: center;
-         width:400px;
-         }
-         .intro-section h2 {
-         font-size: 50px;
-         }
-         .intro-section p {
-         font-size: 18px;
-         }
-         }
+      }
 
-         @media (max-width: 504px) {
-   .tree-services
-         {
-         margin-top: -140px;
-         margin-bottom: 50px;
-         }
+      .text-left {
+         left: 0px;
+         top: 288px;
+         text-align: left;
+      }
 
-  
-}
-         @media (max-width: 480px) {
-         section.tree-container {
-         align-items: center;
-         padding-top: 570px;
-         padding-bottom: 0px;
-         }
-         .tree-services
-         {
-         min-height: 1vh;
-         }
-         .tree {
-         max-width: 200px;
+      .text-right {
+         right: 0px;
+         top: 300px;
+         text-align: right;
+      }
+      
+   }
+
+   @media screen and (min-width: 800px) {
+      .yobirdie-tree-container {
+         height: 830px;
+         width: 700px;
+      }
+
+      .tree {
+         width: 80%;
+         height: auto;
+      }
+
+      .advisor {
+         left: 65px;
+         top: 90px;
+      }
+
+      .text-left {
+         left: -20px;
+         top: 280px;
+         text-align: left;
+      }
+
+      .line-left {
          display: block;
-         margin: 0 auto;
-         display: none;
-         }
-         .info-box {
-         position: static;
-         margin: 10px 0;
-         border-radius: 10px;
-         width: 100%;
-         }
-         .text-box {
-         position: static;
-         text-align: center;
+         left: -20px;
+         top: 215px;
+         width: 70px;
+         height: 40px;
+      }
+
+      .resources {
+         right: 55px;
+         top: 155px;
+      }
+
+      .text-right {
+         right: -25px;
+         top: 350px;
+         text-align: right;
+      }
+
+      .line-right {
+         display:block;
+         right: -25px;
+         top: 285px;
+         width: 70px;
+         height: 40px;
+      }
+      
+   }
+
+   @media screen and (min-width: 1280px) {
+      .tree-services {
+         margin-top: -455px;
+         height: 1485px;
+      }
+   }
+
+   @media screen and (min-width: 1451px) {
+      .text-box {
+         width: 320px;
+         font-size: 24px;
+      }
+
+      .tree-services {
+         margin-top: -455px;
+         height: 1948px;
+      }
+
+      .yobirdie-tree-container {
+         width: 1366px;
+      }
+
+      .tree-services {
+         justify-content: start;
+      }
+
+      .tree {
          width: 60%;
-         margin: 10px 0;
-         }
-         .line {
-         display: none;
-         }
-         }
-      </style>
-      <section class="tree-services" id="services">
-         <section class="tree-container">
-            <section class="intro-section">
-               <div class="intro-text">
-                  <p>LET'S GET THIS SHOW ON THE ROAD</p>
-                  <h2>Our Approach Makes All the Difference</h2>
-                  <p>Find your right solution here. Get a Client Advocate<br> with the right connections on your side.</p>
-               </div>
-            </section>
-            <img style ="width: 841px;" class="tree" src="https://liammiggy.github.io/yobirdie/tree.png" alt="yobirdietree">
-            <!-- Dedicated Client Advisor -->
-            <div class="info-box advisor">Dedicated Client Advisor</div>
-            <div class="line line-left"></div>
-            <div class="text-box text-left">
-               To help you build your online presence from scratch to operations (40 hours resource access)
-            </div>
-            <!-- Added Resources -->
-            <div class="info-box resources">Added Resources</div>
-            <div class="line line-right"></div>
-            <div class="text-box text-right">
-               Hourly, additional resources for special projects
-            </div>
-         </section>
+         height: auto;
+      }
+
+      .info-box {
+         width: 220px;
+         height: 220px;
+         font-size: 30px;
+      }
+
+      .resources {
+         right: 290px;
+         top: 250px;
+      }
+
+      .line-right {
+         right: 105px;
+         top: 365px;
+         width: 150px;
+         height: 70px;
+      }
+
+      .text-right {
+         right: 80px;
+         top: 500px;
+         font-size: 24px;
+      }
+
+      .advisor {
+         left: 300px;
+         top: 170px;
+      }
+
+      .line-left {
+         left: 120px;
+         top: 285px;
+         width: 140px;
+         height: 70px;
+      }
+
+      .text-left {
+         left: 75px;
+         top: 410px;
+         text-align: left;
+      }
+      
+   }
+</style>
+<section class="tree-services" id="services">
+   <section class="tree-container">
+      <section class="intro-section">
+         <div class="intro-text">
+            <p>LET'S GET THIS SHOW ON THE ROAD</p>
+            <h2>Our Approach Makes All the Difference</h2>
+            <p>Find your right solution here. Get a Client Advocate<br> with the right connections on your side.</p>
+         </div>
       </section>
+      <div class="yobirdie-tree-container">
+         <img class="tree" src="https://liammiggy.github.io/yobirdie/tree.png" alt="yobirdietree">
+         <!-- Dedicated Client Advisor -->
+         <div class="info-box advisor">Dedicated Client Advisor</div>
+         <div class="line line-left"></div>
+         <div class="text-box text-left">
+            To help you build your online presence from scratch to operations (40 hours resource access)
+         </div>
+         <!-- Added Resources -->
+         <div class="info-box resources">Added Resources</div>
+         <div class="line line-right"></div>
+         <div class="text-box text-right">
+            Hourly, additional resources for special projects
+         </div>
+   </div>
+   </section>
+</section>
 
 
 <style>
-  .contact-section {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: #001f60;
-    padding: 50px 20px; /* Adjusted padding for smaller screens */
-    background: #fff;
-}
+   .contact-section {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #001f60;
+      padding: 50px 20px;
+      /* Adjusted padding for smaller screens */
+      background: #fff;
+   }
 
-.contact-section h2 {
-    font-size: 70px;
-    font-weight: bold;
-    line-height: 1.3;
-}
+   .contact-section h2 {
+      font-size: 70px;
+      font-weight: bold;
+      line-height: 1.3;
+   }
 
-.contact-section h3 {
-    font-size: 45px;
-    font-weight: bold;
-    line-height: 1.3;
-}
+   .contact-section h3 {
+      font-size: 45px;
+      font-weight: bold;
+      line-height: 1.3;
+   }
 
-.contact-info {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap on small screens */
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    font-size: 1.2rem;
-    text-align: center;
-}
+   .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allows items to wrap on small screens */
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      text-align: center;
+   }
 
-.icon {
-    width: auto;
-    height: 30px;
-}
- .contact-info span{
-   font-size: 30px;
-   font-weight: 700;
-   padding:20px;
- }
+   .icon {
+      width: auto;
+      height: 30px;
+   }
 
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .contact-section {
-        padding: 30px 10px;
-    }
-
-    .contact-section h2 {
-        font-size: 45px; /* Smaller font size on mobile */
-    }
-     .contact-section h3 {
-        font-size: 35px; /* Smaller font size on mobile */
-        margin-bottom: 20px;
-    }
-
-    .contact-info {
-        flex-direction: column; /* Stack items vertically on small screens */
-        font-size: 1rem;
-       
-    }
-
-    .icon {
-        width: 25px;
-        height: auto;
-    }
-      .contact-info span{
-   font-size: 25px;
-   font-weight: 700;
- 
- }
+   .contact-info span {
+      font-size: 30px;
+      font-weight: 700;
+      padding: 20px;
+   }
 
 
-    /* Calendly Widget Responsive Fix */
-    .calendly-inline-widget {
-        width: 100% !important;
-        min-width: 320px;
-        height: 500px; /* Adjust height for mobile */
-    }
-}
+   /* Responsive Styling */
+   @media (max-width: 768px) {
+      .contact-section {
+         padding: 30px 10px;
+      }
+
+      .contact-section h2 {
+         font-size: 45px;
+         /* Smaller font size on mobile */
+      }
+
+      .contact-section h3 {
+         font-size: 35px;
+         /* Smaller font size on mobile */
+         margin-bottom: 20px;
+      }
+
+      .contact-info {
+         flex-direction: column;
+         /* Stack items vertically on small screens */
+         font-size: 1rem;
+
+      }
+
+      .icon {
+         width: 25px;
+         height: auto;
+      }
+
+      .contact-info span {
+         font-size: 25px;
+         font-weight: 700;
+
+      }
 
 
+      /* Calendly Widget Responsive Fix */
+      .calendly-inline-widget {
+         width: 100% !important;
+         min-width: 320px;
+         height: 500px;
+         /* Adjust height for mobile */
+      }
+   }
 </style>
 
-      <section class="contact-section">
-        <section id="contact" style="padding-top: 80px; margin-top: -80px;"><p></p> </section>
-    <!-- <h2>More time for you, less stress<br> for your business.</h2> -->
-    <div class="contact-info">
-        <!-- <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/Email.webp" alt="Email Icon" class="icon"> -->
-       <!--  <span>info@callbirdie.com, or call us at</span>
+<section class="contact-section">
+   <section id="contact" style="padding-top: 80px; margin-top: -80px;">
+      <p></p>
+   </section>
+   <!-- <h2>More time for you, less stress<br> for your business.</h2> -->
+   <div class="contact-info">
+      <!-- <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/Email.webp" alt="Email Icon" class="icon"> -->
+      <!--  <span>info@callbirdie.com, or call us at</span>
         <img src="https://yobirdie.com/wp-content/themes/unix-theme/assets/images/phone.webp" alt="Phone Icon" class="icon">
         <span>888-888-8888</span> -->
-    </div>
-     <h3>Book an Appoinment</h3>
-            <div class="calendly-inline-widget" id="calendly-embedded" 
-        data-url="https://calendly.com/basil-yobirdie/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=00d3f9&text_color=ffffff"
-        style="min-width: 320px; height: 700px;">
-    </div>
+   </div>
+   <h3>Book an Appoinment</h3>
+   <div class="calendly-inline-widget" id="calendly-embedded"
+      data-url="https://calendly.com/basil-yobirdie/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=00d3f9&text_color=ffffff"
+      style="min-width: 320px; height: 700px;">
+   </div>
    <h2>More time for you, less stress<br> for your business.</h2>
 
 </section>
 
-      
-         
-        
-      <style>
+
+
+
+<style>
    .footer {
-      background: linear-gradient(to bottom, #003580, #00245a); /* Dark blue gradient */
+      background: linear-gradient(to bottom, #003580, #00245a);
+      /* Dark blue gradient */
       color: white;
-      padding: 100px 30px 10px 30px; /* Added equal padding on both sides */
-      text-align: center; /* Center text by default */
+      padding: 100px 30px 10px 30px;
+      /* Added equal padding on both sides */
+      text-align: center;
+      /* Center text by default */
    }
+
    .footer-container {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      max-width: 1280px; /* Constraint width */
+      max-width: 1280px;
+      /* Constraint width */
       width: 100%;
       margin: auto;
       flex-wrap: wrap;
-      gap: 50px; /* Reduced gap for better responsiveness */
-      justify-content: center; /* Center the content */
+      gap: 50px;
+      /* Reduced gap for better responsiveness */
+      justify-content: center;
+      /* Center the content */
    }
+
    .newsletter {
       flex: 1.5;
       min-width: 320px;
       text-align: left;
    }
+
    .newsletter h2 {
       font-size: 36px;
       margin-bottom: 25px;
    }
+
    .newsletter form {
       display: flex;
       align-items: center;
       gap: 10px;
       max-width: 700px;
-      margin: auto; /* Center form */
+      margin: auto;
+      /* Center form */
    }
+
    .newsletter input {
       flex: 1;
       padding: 12px 16px;
@@ -1557,9 +1842,11 @@
       font-size: 1rem;
       outline: none;
    }
+
    .newsletter input::placeholder {
       color: rgba(255, 255, 255, 0.7);
    }
+
    .newsletter button {
       background-color: #00d4ff;
       color: #00245a;
@@ -1569,135 +1856,182 @@
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
-   
+
    }
+
    .newsletter button:hover {
       background-color: #00aacc;
    }
-   .contact, .navigate {
+
+   .contact,
+   .navigate {
       flex: 1;
       min-width: 250px;
       text-align: left;
    }
-   .contact h3, .navigate h3 {
+
+   .contact h3,
+   .navigate h3 {
       font-size: 1.2rem;
       margin-bottom: 12px;
    }
+
    .contact p {
       margin: 15px 0;
       font-size: 16px;
       font-weight: regular;
       line-height: 25px;
    }
+
    .navigate ul {
       list-style: none;
       padding: 0;
       margin: 15px 0;
    }
+
    .navigate ul li {
       margin-bottom: 6px;
    }
+
    .navigate ul li a {
       color: white;
       text-decoration: none;
       font-size: 16px;
       line-height: 25px;
    }
+
    .footer-bottom {
       text-align: center;
       padding-top: 20px;
       border-top: 1px solid #00d4ff;
       margin-top: 30px;
    }
+
    .footer-bottom p {
       font-size: 0.8rem;
    }
 
    @media (max-width: 768px) {
-   .footer-container {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      gap: 25px;
-      padding: 0 20px; /* Added equal padding on both sides */
-   }
-   .newsletter form {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%; /* Ensure form takes full width */
-   }
-   .newsletter input {
-      width: 100%; /* Input field takes full width */
-      text-align: center;
-      padding: 12px;
-   }
-   .newsletter button {
-      width: 100%; /* Button takes full width */
-      padding: 12px;
-   }
-   .contact, .navigate {
-      text-align: center;
-      width: 100%; /* Ensure contact and navigation take full width */
-   }
-   h2 {
-      text-align: center;
-      font-size: 28px;
-   }
-   .navigate ul {
-      padding: 0;
-      margin: 0;
-      text-align: center;
-   }
-   .navigate ul li {
-      margin-bottom: 12px;
-   }
-}
+      .footer-container {
+         flex-direction: column;
+         text-align: center;
+         align-items: center;
+         gap: 25px;
+         padding: 0 20px;
+         /* Added equal padding on both sides */
+      }
 
-/* 📱 Tablet & Small Device Adjustments (960px and below) */
-@media (max-width: 960px) {
-   .footer-container {
-      flex-direction: column; /* Stack the sections vertically */
-      gap: 30px; /* Increased gap to make the sections more spaced out */
+      .newsletter form {
+         flex-direction: column;
+         gap: 10px;
+         width: 100%;
+         /* Ensure form takes full width */
+      }
+
+      .newsletter input {
+         width: 100%;
+         /* Input field takes full width */
+         text-align: center;
+         padding: 12px;
+      }
+
+      .newsletter button {
+         width: 100%;
+         /* Button takes full width */
+         padding: 12px;
+      }
+
+      .contact,
+      .navigate {
+         text-align: center;
+         width: 100%;
+         /* Ensure contact and navigation take full width */
+      }
+
+      h2 {
+         text-align: center;
+         font-size: 28px;
+      }
+
+      .navigate ul {
+         padding: 0;
+         margin: 0;
+         text-align: center;
+      }
+
+      .navigate ul li {
+         margin-bottom: 12px;
+      }
    }
-   .newsletter {
-      width: 90%; /* Ensure the newsletter takes up most of the container */
-      margin: auto;
+
+   /* 📱 Tablet & Small Device Adjustments (960px and below) */
+   @media (max-width: 960px) {
+      .footer-container {
+         flex-direction: column;
+         /* Stack the sections vertically */
+         gap: 30px;
+         /* Increased gap to make the sections more spaced out */
+      }
+
+      .newsletter {
+         width: 90%;
+         /* Ensure the newsletter takes up most of the container */
+         margin: auto;
+      }
+
+      .contact,
+      .navigate {
+         width: 100%;
+         /* Ensure contact and navigation take full width */
+         text-align: center;
+      }
+
+      .contact p,
+      .navigate ul {
+         text-align: center;
+         /* Center text for contact and navigation */
+      }
    }
-   .contact, .navigate {
-      width: 100%; /* Ensure contact and navigation take full width */
-      text-align: center;
-   }
-   .contact p, .navigate ul {
-      text-align: center; /* Center text for contact and navigation */
-   }
-}
 
    /* Tablet Adjustments */
    @media (max-width: 1024px) {
       .footer-container {
-         gap: 30px; /* Reduced gap for tablet */
-         padding: 0 20px; /* Equal padding for tablet */
+         gap: 30px;
+         /* Reduced gap for tablet */
+         padding: 0 20px;
+         /* Equal padding for tablet */
       }
+
       .newsletter input {
-         width: 75%; /* Reduced input width for tablets */
+         width: 75%;
+         /* Reduced input width for tablets */
       }
+
       .newsletter button {
-         width: 40%; /* Reduced button width for tablets */
+         width: 40%;
+         /* Reduced button width for tablets */
       }
-      .contact, .navigate {
-         width: 100%; /* Ensure contact and navigation take full width */
+
+      .contact,
+      .navigate {
+         width: 100%;
+         /* Ensure contact and navigation take full width */
       }
    }
 
    /* Desktop Adjustments */
    @media (min-width: 1025px) {
       .footer-container {
-         gap: 100px; /* Larger gap for desktop */
-         padding: 0 30px; /* Balanced padding for desktop */
+         gap: 100px;
+         /* Larger gap for desktop */
+         padding: 0 30px;
+         /* Balanced padding for desktop */
       }
+
       .newsletter input {
          width: 60%;
       }
+
       .newsletter button {
          width: 40%;
       }
@@ -1706,67 +2040,100 @@
 
 
 
-      <!-- <img style="margin-bottom: -50px"; src="footercurve.png" alt="Hero Decorative Line"> -->
-      <footer class="footer">
-         <div class="footer-container">
-            <div class="newsletter">
-               <h2>Subscribe to our newsletter</h2>
-               <form>
-                  <input type="email" placeholder="Email Address">
-                  <button type="submit">Submit</button>
-               </form>
-            </div>
-            <div class="contact">
-               <h3>Contact Us</h3>
-               <p><strong>Phone</strong><br>888-888-8888</p>
-               <p><strong>Email</strong><br>info@callbirdie.com</p>
-               <p><strong>Address</strong><br>1150 W Evelyn Ave.<br>Sunnyvale, CA 94086</p>
-            </div>
-            <div class="navigate">
-               <h3>Navigate</h3>
-               <ul>
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#why_us">About us</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                  <li><a href="#">Articles</a></li>
+<!-- <img style="margin-bottom: -50px"; src="footercurve.png" alt="Hero Decorative Line"> -->
+<footer class="footer">
+   <div class="footer-container">
+      <div class="newsletter">
+         <h2>Subscribe to our newsletter</h2>
+         <form>
+            <input type="email" placeholder="Email Address">
+            <button type="submit">Submit</button>
+         </form>
+      </div>
+      <div class="contact">
+         <h3>Contact Us</h3>
+         <p><strong>Phone</strong><br>888-888-8888</p>
+         <p><strong>Email</strong><br>info@callbirdie.com</p>
+         <p><strong>Address</strong><br>1150 W Evelyn Ave.<br>Sunnyvale, CA 94086</p>
+      </div>
+      <div class="navigate">
+         <h3>Navigate</h3>
+         <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why_us">About us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Articles</a></li>
 
-               </ul>
-            </div>
-         </div>
-         <br><br>
-         <div class="footer-bottom">
-            <br><br>
-            <p>All rights © callbirdie 2025</p>
-         </div>
-      </footer>
-      
-         <script >
-         function showService(index) {
-         let tabs = document.querySelectorAll('.tab');
-         let services = document.querySelectorAll('.service-item');
-         
-         tabs.forEach(tab => tab.classList.remove('active'));
-         services.forEach(service => service.classList.remove('active'));
-         
-         tabs[index].classList.add('active');
-         services[index].classList.add('active');
-         }
-         
-         </script>
-         <script>
-         function showService(index) {
-             let tabs = document.querySelectorAll('.tab');
-             let services = document.querySelectorAll('.service-item');
-         
-             tabs.forEach(tab => tab.classList.remove('active'));
-             services.forEach(service => service.classList.remove('active'));
-         
-             tabs[index].classList.add('active');
-             services[index].classList.add('active');
-         }
-         </script>
-         
-        
-   </body>
+         </ul>
+      </div>
+   </div>
+   <br><br>
+   <div class="footer-bottom">
+      <br><br>
+      <p>All rights © callbirdie 2025</p>
+   </div>
+</footer>
+
+<script>
+   function showService(index) {
+      let tabs = document.querySelectorAll('.tab');
+      let services = document.querySelectorAll('.service-item');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      services.forEach(service => service.classList.remove('active'));
+
+      tabs[index].classList.add('active');
+      services[index].classList.add('active');
+   }
+
+</script>
+<script>
+   function showService(index) {
+      let tabs = document.querySelectorAll('.tab');
+      let services = document.querySelectorAll('.service-item');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      services.forEach(service => service.classList.remove('active'));
+
+      tabs[index].classList.add('active');
+      services[index].classList.add('active');
+   }
+</script>
+<script>
+  function adjustBirdMarginAndImage() {
+    const bird = document.querySelector('.animated-bird-image');
+    const birdImg = bird.querySelector('img');
+
+    const baseWidth = 1920;
+    const currentWidth = window.innerWidth;
+    const diff = baseWidth - currentWidth;
+
+    // Margin-top: Increase by 0.5% every 80px decrease
+    if (diff > 0) {
+      const steps = Math.floor(diff / 80);
+      const extraMargin = steps * 1;
+      bird.style.marginTop = `calc(34% + ${extraMargin}%)`;
+
+      // Image width: start at 93.5% and reduce by 0.5% per step
+      let newWidth = 93.5 - (steps * 1);
+      if (newWidth < 80) newWidth = 80; // Optional min cap
+      birdImg.style.width = `${newWidth}%`;
+    } else {
+      bird.style.marginTop = '34%';
+      birdImg.style.width = '94%';
+    }
+  }
+
+  window.addEventListener('load', adjustBirdMarginAndImage);
+  window.addEventListener('resize', adjustBirdMarginAndImage);
+</script>
+
+
+
+
+
+
+</body>
+
 </html>
