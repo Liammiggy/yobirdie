@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Payroll UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+<!-- Tailwind CSS version of HR Payroll UI -->
+<div class="p-6 space-y-12">
+  <!-- 1. Attendance Log -->
+  <div>
+    <h2 class="text-2xl font-bold mb-4">Attendance Log</h2>
+    <form class="flex flex-wrap gap-4 mb-4">
+      <input type="date" name="from" class="border p-2 rounded">
+      <input type="date" name="to" class="border p-2 rounded">
+      <input type="text" name="employee" placeholder="Search Employee" class="border p-2 rounded">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded">Filter</button>
+    </form>
+    <div class="overflow-x-auto">
+      <table class="w-full table-auto border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border p-2">Employee</th>
+            <th class="border p-2">Date</th>
+            <th class="border p-2">Time In</th>
+            <th class="border p-2">Time Out</th>
+            <th class="border p-2">Total Hours</th>
+            <th class="border p-2">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border p-2">John Doe</td>
+            <td class="border p-2">2025-04-15</td>
+            <td class="border p-2">08:00</td>
+            <td class="border p-2">17:00</td>
+            <td class="border p-2">9</td>
+            <td class="border p-2 text-green-600 font-semibold">Present</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2. Overtime Request -->
+  <div>
+    <h2 class="text-2xl font-bold mb-4">Overtime Request</h2>
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" name="employee" placeholder="Employee Name" class="border p-2 rounded" required>
+      <input type="date" name="date" class="border p-2 rounded" required>
+      <input type="time" name="start_time" class="border p-2 rounded" required>
+      <input type="time" name="end_time" class="border p-2 rounded" required>
+      <textarea name="reason" placeholder="Reason" class="border p-2 rounded col-span-full" required></textarea>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded w-max">Submit Request</button>
+    </form>
+  </div>
+
+  <!-- 3. Leave Application -->
+  <div>
+    <h2 class="text-2xl font-bold mb-4">Leave Application</h2>
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" name="employee" placeholder="Employee Name" class="border p-2 rounded" required>
+      <select name="type" class="border p-2 rounded">
+        <option>Sick</option>
+        <option>Vacation</option>
+        <option>Emergency</option>
+      </select>
+      <input type="date" name="from" class="border p-2 rounded" required>
+      <input type="date" name="to" class="border p-2 rounded" required>
+      <textarea name="reason" placeholder="Reason" class="border p-2 rounded col-span-full" required></textarea>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded w-max">Apply</button>
+    </form>
+  </div>
+
+  <!-- 4. Shift Schedule Management -->
+  <div>
+    <h2 class="text-2xl font-bold mb-4">Shift Schedule</h2>
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <input type="text" name="employee" placeholder="Employee Name" class="border p-2 rounded" required>
+      <select name="shift" class="border p-2 rounded">
+        <option>Morning (08:00 - 17:00)</option>
+        <option>Night (20:00 - 05:00)</option>
+        <option>Custom</option>
+      </select>
+      <input type="date" name="date" class="border p-2 rounded" required>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded w-max">Assign Shift</button>
+    </form>
+    <div class="overflow-x-auto">
+      <table class="w-full table-auto border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border p-2">Employee</th>
+            <th class="border p-2">Shift</th>
+            <th class="border p-2">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border p-2">Jane Doe</td>
+            <td class="border p-2">Morning (08:00 - 17:00)</td>
+            <td class="border p-2">2025-04-16</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5. Staff Time-In/Out with PIN -->
+  <div class="bg-white p-6 shadow rounded">
+    <h2 class="text-2xl font-bold mb-4">Time In / Time Out</h2>
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" name="employee" placeholder="Employee Name or ID" class="border p-2 rounded" required>
+      <input type="password" name="pin" placeholder="Enter PIN" class="border p-2 rounded" required>
+      <button class="bg-green-600 text-white px-4 py-2 rounded w-max">Time In</button>
+      <button class="bg-red-600 text-white px-4 py-2 rounded w-max">Time Out</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
